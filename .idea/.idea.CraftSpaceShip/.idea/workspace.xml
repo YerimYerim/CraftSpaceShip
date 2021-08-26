@@ -19,9 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81cd2360-b819-4989-bfaf-4420b96072ea" name="Default Changelist" comment="">
+    <list default="true" id="81cd2360-b819-4989-bfaf-4420b96072ea" name="Default Changelist" comment="Joystick Move soft even out of Controller">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CraftSpaceShip/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CraftSpaceShip/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Controlloer/JoyStickController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Controlloer/JoyStickController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,8 +60,16 @@
       <workItem from="1629898305367" duration="923000" />
       <workItem from="1629899300046" duration="4721000" />
       <workItem from="1629975557575" duration="1444000" />
-      <workItem from="1629978780099" duration="8457000" />
+      <workItem from="1629978780099" duration="8800000" />
     </task>
+    <task id="LOCAL-00001" summary="Joystick Move soft even out of Controller">
+      <created>1630000663270</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1630000663270</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -82,11 +89,21 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Joystick Move soft even out of Controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="Joystick Move soft even out of Controller" />
   </component>
   <component name="WindowStateProjectService">
     <state x="760" y="220" key="RiderGenerateDialog" timestamp="1629899332539">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="760" y="220" key="RiderGenerateDialog/0.0.1920.1040/1920.181.1600.860@0.0.1920.1040" timestamp="1629899332539" />
+    <state x="100" y="100" width="1720" height="840" key="VCS.FileHistoryDialog" timestamp="1630000702337">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="100" y="100" width="1720" height="840" key="VCS.FileHistoryDialog/0.0.1920.1040/1920.181.1600.860@0.0.1920.1040" timestamp="1630000702337" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1630000695490">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.181.1600.860@0.0.1920.1040" timestamp="1630000695490" />
   </component>
 </project>
