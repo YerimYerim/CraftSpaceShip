@@ -9,30 +9,30 @@ public class JoyStickController : MonoBehaviour, IPointerDownHandler, IDragHandl
 {
     [SerializeField] private Transform playerTransform;
     [SerializeField] private RectTransform joystickBackGround;
-    [SerializeField] private RectTransform joystickController;
+    [SerializeField] private RectTransform joystick;
     
     [SerializeField] private bool isTouched;
-    
     [SerializeField] private Vector2 FirstTouchPos;
     [SerializeField] private Vector2 CurTouchPos;
-    [SerializeField] private Vector3 Force;
+    [SerializeField] private Vector3 Velocity;
+    
     [SerializeField] private float Distance;
-    [SerializeField] private float MaxSpeed;
+    [SerializeField] private float MaxDistance;
     [SerializeField] private float DPS = 1f;
     void Awake()
     {
         playerTransform = GameObject.FindWithTag("PLAYER").gameObject.transform;
         joystickBackGround = GameObject.Find("JoyStickBackGround").gameObject.GetComponent<RectTransform>();
-        joystickController = GameObject.Find("JoyStickController").gameObject.GetComponent<RectTransform>();
+        joystick = GameObject.Find("JoyStickController").gameObject.GetComponent<RectTransform>();
         joystickBackGround.transform.position = Vector3.left * 200000;
-        MaxSpeed = (joystickBackGround.rect.width / 2 - joystickController.rect.width / 2) / 10;
+        MaxDistance = joystickBackGround.rect.width / 2 - joystick.rect.width / 2;
     }
 
     void Update()
     {
         if (isTouched)
         {
-            playerTransform.position = playerTransform.position + Force * Time.deltaTime * Math.Min(Distance/10 , MaxSpeed) * DPS;
+            playerTransform.position += Velocity * Time.deltaTime * Math.Min(Distance , MaxDistance) * DPS * 0.1f;
         }
 
     }
@@ -49,19 +49,26 @@ public class JoyStickController : MonoBehaviour, IPointerDownHandler, IDragHandl
     {
         CurTouchPos = eventData.position;
         Distance = Vector2.Distance(CurTouchPos, FirstTouchPos);
-
-        if (Vector2.Distance(CurTouchPos, FirstTouchPos) < (joystickBackGround.rect.width /2 - joystickController.rect.width/2))
+        
+        Velocity = CurTouchPos - FirstTouchPos;
+        Velocity.Normalize();
+        
+        if (Distance < MaxDistance)
         {
-            joystickController.position = CurTouchPos;
-            Force.Set((CurTouchPos -  FirstTouchPos).x , 0 ,(CurTouchPos -  FirstTouchPos).y );
-            Force.Normalize();
+            joystick.localPosition = CurTouchPos - FirstTouchPos;
         }
+        else
+        {
+            joystick.localPosition = Velocity * MaxDistance;
+        }
+        
+        Velocity.Set(Velocity.x , 0 ,Velocity.y);
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
         isTouched = false;
         joystickBackGround.transform.position = Vector3.left * 200000;
-        joystickController.transform.localPosition = Vector3.zero;
+        joystick.transform.localPosition = Vector3.zero;
     }
 }
