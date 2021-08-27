@@ -20,6 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="81cd2360-b819-4989-bfaf-4420b96072ea" name="Default Changelist" comment="Joystick Move soft even out of Controller">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CraftSpaceShip/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CraftSpaceShip/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CraftSpaceShip/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CraftSpaceShip/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,6 +36,7 @@
       <list>
         <option value="$PROJECT_DIR$/Assets/Script/PlayerControl.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Controlloer/JoyStickController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/ObjectPolling/ObjectPoolManager.cs" />
       </list>
     </option>
   </component>
@@ -61,6 +63,8 @@
       <workItem from="1629899300046" duration="4721000" />
       <workItem from="1629975557575" duration="1444000" />
       <workItem from="1629978780099" duration="8800000" />
+      <workItem from="1630002833578" duration="1024000" />
+      <workItem from="1630077629788" duration="5319000" />
     </task>
     <task id="LOCAL-00001" summary="Joystick Move soft even out of Controller">
       <created>1630000663270</created>

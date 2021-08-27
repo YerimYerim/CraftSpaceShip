@@ -239,8 +239,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 0}
   joystickBackGround: {fileID: 0}
-  joystickController: {fileID: 0}
+  joystick: {fileID: 0}
   isTouched: 0
+  FirstTouchPos: {x: 0, y: 0}
+  CurTouchPos: {x: 0, y: 0}
+  Velocity: {x: 0, y: 0, z: 0}
+  Distance: 0
+  MaxDistance: 0
+  DPS: 1
 --- !u!1 &367095177
 GameObject:
   m_ObjectHideFlags: 0
@@ -330,7 +336,7 @@ GameObject:
   - component: {fileID: 653925149}
   - component: {fileID: 653925148}
   m_Layer: 0
-  m_Name: R
+  m_Name: TestGrid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5757,7 +5763,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-4826
+  m_Name: pb_Mesh16404
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5967,8 +5973,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 0}
   joystickBackGround: {fileID: 0}
-  joystickController: {fileID: 0}
+  joystick: {fileID: 0}
   isTouched: 0
+  FirstTouchPos: {x: 0, y: 0}
+  CurTouchPos: {x: 0, y: 0}
+  Velocity: {x: 0, y: 0, z: 0}
+  Distance: 0
+  MaxDistance: 0
+  DPS: 1
 --- !u!114 &1693142703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6096,13 +6108,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1970512375}
-  m_LocalRotation: {x: 0.21855988, y: -0, z: -0, w: 0.9758235}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.8, z: -14.7}
   m_LocalScale: {x: 0.6782458, y: 0.6782458, z: 0.6782458}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 25.249, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2008561732
 GameObject:
   m_ObjectHideFlags: 0
@@ -6194,8 +6206,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 0}
   joystickBackGround: {fileID: 0}
-  joystickController: {fileID: 0}
+  joystick: {fileID: 0}
   isTouched: 0
+  FirstTouchPos: {x: 0, y: 0}
+  CurTouchPos: {x: 0, y: 0}
+  Velocity: {x: 0, y: 0, z: 0}
+  Distance: 0
+  MaxDistance: 0
+  DPS: 1
 --- !u!1 &2095223163
 GameObject:
   m_ObjectHideFlags: 0
@@ -6261,4 +6279,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2114663184
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2114663186}
+  - component: {fileID: 2114663185}
+  m_Layer: 0
+  m_Name: BulletPoolingManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2114663185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114663184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6651eee56bdb5a4491e5a8ee2035ff9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _objects: []
+  AmountMax: 100
+  prefab: {fileID: 2381393826550057131, guid: ad082193c9b6f444995782b24909382e, type: 3}
+  parentTransform: {fileID: 2114663186}
+--- !u!4 &2114663186
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114663184}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.007391706, y: 0.55, z: -14.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

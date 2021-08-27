@@ -10,6 +10,9 @@
           <e p="Controlloer" t="Include">
             <e p="JoyStickController.cs" t="Include" />
           </e>
+          <e p="ObjectPolling" t="Include">
+            <e p="ObjectPoolManager.cs" t="Include" />
+          </e>
         </e>
       </e>
       <e p="CraftSpaceShip.sln" t="IncludeFlat" />
