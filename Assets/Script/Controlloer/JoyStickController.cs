@@ -21,6 +21,7 @@ public class JoyStickController : MonoBehaviour, IPointerDownHandler, IDragHandl
     [SerializeField] private float DPS = 1f;
     void Awake()
     {
+        
         playerTransform = GameObject.FindWithTag("PLAYER").gameObject.transform;
         joystickBackGround = GameObject.Find("JoyStickBackGround").gameObject.GetComponent<RectTransform>();
         joystick = GameObject.Find("JoyStickController").gameObject.GetComponent<RectTransform>();

@@ -22,6 +22,10 @@
     <list default="true" id="81cd2360-b819-4989-bfaf-4420b96072ea" name="Default Changelist" comment="Joystick Move soft even out of Controller">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CraftSpaceShip/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CraftSpaceShip/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CraftSpaceShip/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CraftSpaceShip/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CraftSpaceShip.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CraftSpaceShip.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Controlloer/JoyStickController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Controlloer/JoyStickController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/ObjectPolling/ObjectPoolManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/ObjectPolling/ObjectPoolManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,11 +35,16 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Script/Enemy/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Script/PlayerControl.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Controlloer/JoyStickController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Enemy/Enemy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/BulletPattern/BulletPattern.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/ObjectPolling/ObjectPoolManager.cs" />
       </list>
     </option>
@@ -65,6 +74,8 @@
       <workItem from="1629978780099" duration="8800000" />
       <workItem from="1630002833578" duration="1024000" />
       <workItem from="1630077629788" duration="5319000" />
+      <workItem from="1630231545521" duration="6012000" />
+      <workItem from="1630308062418" duration="22581000" />
     </task>
     <task id="LOCAL-00001" summary="Joystick Move soft even out of Controller">
       <created>1630000663270</created>
@@ -101,13 +112,17 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="760" y="220" key="RiderGenerateDialog/0.0.1920.1040/1920.181.1600.860@0.0.1920.1040" timestamp="1629899332539" />
-    <state x="100" y="100" width="1720" height="840" key="VCS.FileHistoryDialog" timestamp="1630000702337">
+    <state x="100" y="100" width="1720" height="840" key="VCS.FileHistoryDialog" timestamp="1630324355835">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="100" y="100" width="1720" height="840" key="VCS.FileHistoryDialog/0.0.1920.1040/1920.181.1600.860@0.0.1920.1040" timestamp="1630000702337" />
+    <state x="100" y="100" width="1720" height="840" key="VCS.FileHistoryDialog/0.0.1920.1040/1920.181.1600.860@0.0.1920.1040" timestamp="1630324355835" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1630000695490">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.181.1600.860@0.0.1920.1040" timestamp="1630000695490" />
+    <state x="624" y="254" key="run.anything.popup" timestamp="1630324047464">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="624" y="254" key="run.anything.popup/0.0.1920.1040/1920.181.1600.860@0.0.1920.1040" timestamp="1630324047464" />
   </component>
 </project>
