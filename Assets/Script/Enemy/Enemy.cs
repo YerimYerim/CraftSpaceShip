@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -31,50 +32,52 @@ public enum RotationPattern
     HALF,
     FULL    
 }
-
 public class Enemy : MonoBehaviour
 {
+    [Header("Type")]
     [SerializeField] private EnemyType _enemyType;
     [SerializeField] private AttackPattern _attackPattern;
-    [SerializeField] private RotationPattern _rotationPattern;
     [SerializeField] private int HP = 0;
-    [SerializeField] private static int bulletDamage = 1;
-    [SerializeField] private ObjectPoolManager _bullets;
+    
+    [Header("Move")]
     [SerializeField] private List<Vector3> _path;
     [SerializeField] private int _pathNum;
-    [SerializeField] private float _speed;
-    [SerializeField] private BulletPattern _bulletPattern;
+    [SerializeField] private float _moveSpeed;
+    [SerializeField] private float _rotateSpeed;
+    
+    [Header("BulletControll")]
+    [SerializeField] private Bullets _bulletPattern;
+    [SerializeField] private float _bulletShootSpeed;
+    [SerializeField] private float _bulletMoveSpeed;
+    [SerializeField] private static int bulletDamage = 1;
+
+
     public Enemy(EnemyType enemyType, AttackPattern attackPattern, List<Vector3> path, RotationPattern rotationPattern,
         int hp)
     {
-        _bulletPattern = transform.GetChild(0).GetComponent<BulletPattern>();
+        _bulletPattern = transform.parent.GetChild(1).GetComponent<Bullets>();
         _bulletPattern.init();
-        _path = new List<Vector3>();
         _enemyType = enemyType;
         _attackPattern = attackPattern;
-        _rotationPattern = rotationPattern;
         _path.AddRange(path);
         HP = hp;
-    }
 
+    } 
     void Awake()
     {
-        _bulletPattern = transform.GetChild(0).GetComponent<BulletPattern>();
         _bulletPattern.init();
-        StartCoroutine( _bulletPattern.ActiveBullet(0.5f));
+        StartCoroutine(ShootTimer(_bulletShootSpeed));
     }
     void Update()
     {
-        
         MovePath();
+        gameObject.transform.Rotate(0,_rotateSpeed,0);
         _bulletPattern.SetActiveFalse();
-        _bulletPattern.ShootBullet(_attackPattern, 5 , 1);
     }
-
 
     void MovePath()
     {
-        transform.position = Vector3.MoveTowards(transform.position ,_path[_pathNum],  _speed );
+        transform.position = Vector3.MoveTowards(transform.position ,_path[_pathNum],  _moveSpeed );
 
         if (transform.position == _path[_pathNum])
         {
@@ -87,21 +90,14 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    public void Attack()
+
+    public IEnumerator ShootTimer(float BulletShootSpeed)
     {
-        
-        switch (_attackPattern)
+        while (gameObject.activeSelf)
         {
-            case AttackPattern.ONE:
-                break;
-            case AttackPattern.THREE:
-                
-                break;
-            case AttackPattern.EIGHT:
-                
-                break;
-            default:
-                throw new ArgumentOutOfRangeException();
+            _bulletPattern.ShootBullet(_attackPattern,_bulletMoveSpeed , 0);
+            yield return new WaitForSeconds(BulletShootSpeed);
         }
+    
     }
 }

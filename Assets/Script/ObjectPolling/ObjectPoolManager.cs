@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 
 public class  ObjectPoolManager : MonoBehaviour
 {
@@ -8,7 +9,7 @@ public class  ObjectPoolManager : MonoBehaviour
     [SerializeField] protected int AmountMax = 100;
     [SerializeField] protected GameObject prefab;
     [SerializeField] protected Transform parentTransform;
-    [SerializeField] protected int ActiveNum = 0;
+    [SerializeField] protected int LastNum = 0;
     public virtual void init()
     {
         _objects = new List<GameObject>();    
@@ -19,7 +20,6 @@ public class  ObjectPoolManager : MonoBehaviour
             tempObject.SetActive(false); 
             _objects.Add(tempObject);
         }
-        
     }
 
     protected GameObject getObject(int num)
@@ -36,39 +36,31 @@ public class  ObjectPoolManager : MonoBehaviour
 
     void Update()
     {
-        print(ActiveNum);
+        SetActiveFalse();
     }
     public void SetActiveFalse()
     {
         for (int i = 0; i < _objects.Count; ++i)
         {
-            if(Vector3.Distance(_objects[i].transform.position,Vector3.zero) > 20f && _objects[i].activeSelf == true)
+            if(Vector3.Distance(_objects[i].transform.position,Vector3.zero) > 10f && _objects[i].activeSelf == true)
             {
                 _objects[i].SetActive(false);
                 _objects[i].transform.position = Vector3.zero;
-                --ActiveNum;
             }
         }
     }
 
-    protected void SetActive()
+    protected GameObject SetActive()
     {
-        print("im active");
-        if (ActiveNum < AmountMax)
+        for (int i = 0; i < AmountMax; ++i)
         {
-            _objects[ActiveNum].SetActive(true);
-            ++ActiveNum;
-        }
-        else
-        {
-            if (_objects[0].activeSelf == false)
+            if (_objects[i].activeSelf == false)
             {
-                ActiveNum = 0;
-                _objects[ActiveNum].SetActive(true);
+                _objects[i].SetActive(true);
+                return _objects[i];
             }
         }
 
+        return null;
     }
-
-    
 }
