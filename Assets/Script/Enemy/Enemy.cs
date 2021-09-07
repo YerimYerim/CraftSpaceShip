@@ -35,44 +35,44 @@ public enum RotationPattern
 public class Enemy : MonoBehaviour
 {
     [Header("Type")]
-    [SerializeField] private EnemyType _enemyType;
-    [SerializeField] private AttackPattern _attackPattern;
-    [SerializeField] private int HP = 0;
+    [SerializeField] public EnemyType _enemyType;
+    [SerializeField] public AttackPattern _attackPattern;
+    [SerializeField] public int HP = 0;
     
     [Header("Move")]
-    [SerializeField] private List<Vector3> _path;
+    [SerializeField] public List<Vector3> _path;
     [SerializeField] private int _pathNum;
-    [SerializeField] private float _moveSpeed;
-    [SerializeField] private float _rotateSpeed;
+    [SerializeField] public float _moveSpeed;
+    [SerializeField] public float _rotateSpeed;
     
     [Header("BulletControll")]
-    [SerializeField] private Bullets _bulletPattern;
-    [SerializeField] private float _bulletShootSpeed;
-    [SerializeField] private float _bulletMoveSpeed;
+    [SerializeField] public Bullets _bulletPattern;
+    [SerializeField] public float _bulletShootSpeed;
+    [SerializeField] public float _bulletMoveSpeed;
     [SerializeField] private static int bulletDamage = 1;
 
-
-    public Enemy(EnemyType enemyType, AttackPattern attackPattern, List<Vector3> path, RotationPattern rotationPattern,
-        int hp)
-    {
-        _bulletPattern = transform.parent.GetChild(1).GetComponent<Bullets>();
-        _bulletPattern.init();
-        _enemyType = enemyType;
-        _attackPattern = attackPattern;
-        _path.AddRange(path);
-        HP = hp;
-
-    } 
+    [SerializeField] public bool isStart = false;
+    [SerializeField] private Coroutine ShooterCoroutine;
     void Awake()
     {
         _bulletPattern.init();
-        StartCoroutine(ShootTimer(_bulletShootSpeed));
     }
     void Update()
     {
-        MovePath();
-        gameObject.transform.Rotate(0,_rotateSpeed,0);
-        _bulletPattern.SetActiveFalse();
+
+        if (isStart)
+        {
+            if (ShooterCoroutine == null)
+            {
+                ShooterCoroutine = StartCoroutine(ShootTimer(_bulletShootSpeed));
+            }
+            else
+            {
+                MovePath();
+                gameObject.transform.Rotate(0, _rotateSpeed, 0);
+                _bulletPattern.SetActiveFalse();
+            }
+        }
     }
 
     void MovePath()
@@ -99,5 +99,60 @@ public class Enemy : MonoBehaviour
             yield return new WaitForSeconds(BulletShootSpeed);
         }
     
+    }
+
+    public void SetProperty(
+    EnemyType enemyType, AttackPattern attackPattern, int hp, 
+    List<Vector3> path, int pathNum, float moveSpeed, 
+    float rotateSpeed, Bullets bulletPattern, 
+    float bulletShootSpeed,    float bulletMoveSpeed)
+    {
+        _enemyType = enemyType;
+        _attackPattern = attackPattern;
+        HP = hp;
+        _path.AddRange(path);
+        _pathNum = pathNum;
+        _moveSpeed = moveSpeed;
+        _rotateSpeed = rotateSpeed;
+        _bulletPattern = bulletPattern;
+        _bulletShootSpeed = bulletShootSpeed;
+        _bulletMoveSpeed = bulletMoveSpeed;
+    }
+
+
+    public string GetEnemyTypeString()
+    {
+        switch (_enemyType)
+        {
+            case EnemyType.MINI:
+                return "MINI";
+                break;
+            case EnemyType.MIDDLE:
+                return "MIDDLE";
+                break;
+            case EnemyType.BOSS:
+                return "BIG";
+                break;
+            default:
+                throw new ArgumentOutOfRangeException();
+        }
+    }
+
+    public string GetBulletTypeString()
+    {
+        switch (_attackPattern)
+        {
+            case AttackPattern.ONE:
+                return "ONE";
+                break;
+            case AttackPattern.THREE:
+                return "THREE";
+                break;
+            case AttackPattern.EIGHT:
+                return "EIGHT";
+                break;
+            default:
+                throw new ArgumentOutOfRangeException();
+        }
     }
 }

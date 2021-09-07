@@ -22,14 +22,11 @@
     <list default="true" id="81cd2360-b819-4989-bfaf-4420b96072ea" name="Default Changelist" comment="Joystick Move soft even out of Controller">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CraftSpaceShip/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CraftSpaceShip/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CraftSpaceShip/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CraftSpaceShip/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/BulletTest.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/BulletTest.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/CraftSpaceShip.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CraftSpaceShip.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/BulletPattern/BulletPattern.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/BulletPattern/BulletPattern.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/Enemy/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Enemy/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/ObjectPolling/ObjectPoolManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/ObjectPolling/ObjectPoolManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/AndroidLogcatSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/AndroidLogcatSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,9 +37,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Script/FrameCheck/FrameCheck.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Enemy/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C7864A0E-AEB2-4B2A-999F-B177623D54B4/c5/b2a7104b/WaitForSeconds.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -51,9 +46,10 @@
         <option value="$PROJECT_DIR$/Assets/Script/Controlloer/JoyStickController.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/BulletPattern/BulletPattern.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/ObjectPolling/ObjectPoolManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/Enemy/Enemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/BulletPattern/Bullets.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/FrameCheck/FrameCheck.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Enemy/Enemy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/MapTool/WaveManager.cs" />
       </list>
     </option>
   </component>
@@ -66,6 +62,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -88,6 +85,8 @@
       <workItem from="1630426151875" duration="8610000" />
       <workItem from="1630498020939" duration="10608000" />
       <workItem from="1630569537951" duration="2542000" />
+      <workItem from="1630920628884" duration="12857000" />
+      <workItem from="1631019408103" duration="20625000" />
     </task>
     <task id="LOCAL-00001" summary="Joystick Move soft even out of Controller">
       <created>1630000663270</created>
@@ -132,9 +131,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.181.1600.860@0.0.1920.1040" timestamp="1630000695490" />
-    <state x="624" y="254" key="run.anything.popup" timestamp="1630324047464">
+    <state x="624" y="254" key="run.anything.popup" timestamp="1631019462251">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="624" y="254" key="run.anything.popup/-1920.1.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1631019462251" />
     <state x="624" y="254" key="run.anything.popup/0.0.1920.1040/1920.181.1600.860@0.0.1920.1040" timestamp="1630324047464" />
+    <state x="1229" y="230" key="search.everywhere.popup" timestamp="1630959680659">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1229" y="230" key="search.everywhere.popup/-1920.1.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1630959680659" />
   </component>
 </project>
