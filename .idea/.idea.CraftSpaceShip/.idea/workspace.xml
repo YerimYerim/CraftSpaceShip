@@ -22,10 +22,14 @@
     <list default="true" id="81cd2360-b819-4989-bfaf-4420b96072ea" name="Default Changelist" comment="Joystick Move soft even out of Controller">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CraftSpaceShip/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CraftSpaceShip/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CraftSpaceShip/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CraftSpaceShip/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CraftSpaceShip MapTool.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CraftSpaceShip MapTool.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/CraftSpaceShip.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CraftSpaceShip.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/BulletPattern/Bullets.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/BulletPattern/Bullets.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Controlloer/JoyStickController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Controlloer/JoyStickController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/Enemy/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Enemy/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/AndroidLogcatSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/AndroidLogcatSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/MapTool/WaveManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/MapTool/WaveManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,19 +41,25 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C7864A0E-AEB2-4B2A-999F-B177623D54B4/c5/b2a7104b/WaitForSeconds.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Enemy/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../unity/2020.3.6f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/ExecuteEvents.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C7864A0E-AEB2-4B2A-999F-B177623D54B4/5b/66f88a95/SerializeField.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/BulletPattern/PlayerTurret.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Script/PlayerControl.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/Controlloer/JoyStickController.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/BulletPattern/BulletPattern.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/ObjectPolling/ObjectPoolManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/BulletPattern/Bullets.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/FrameCheck/FrameCheck.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Enemy/Enemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/MapTool/WaveManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Controlloer/JoyStickController.cs" />
+        <option value="$PROJECT_DIR$/Assets/#NVJOB Dynamic Sky/#NVJOB Dynamic Sky/DynamicSky.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/BulletPattern/Bullets.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/BulletPattern/PlayerTurret.cs" />
       </list>
     </option>
   </component>
@@ -62,6 +72,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -87,6 +98,16 @@
       <workItem from="1630569537951" duration="2542000" />
       <workItem from="1630920628884" duration="12857000" />
       <workItem from="1631019408103" duration="20625000" />
+      <workItem from="1631254811519" duration="10539000" />
+      <workItem from="1631281309859" duration="2876000" />
+      <workItem from="1631385027513" duration="2313000" />
+      <workItem from="1631522584055" duration="10865000" />
+      <workItem from="1631553287063" duration="6987000" />
+      <workItem from="1631592637899" duration="682000" />
+      <workItem from="1631621500568" duration="2510000" />
+      <workItem from="1631668199272" duration="562000" />
+      <workItem from="1631668916776" duration="6108000" />
+      <workItem from="1631711415235" duration="11687000" />
     </task>
     <task id="LOCAL-00001" summary="Joystick Move soft even out of Controller">
       <created>1630000663270</created>
@@ -123,22 +144,45 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="760" y="220" key="RiderGenerateDialog/0.0.1920.1040/1920.181.1600.860@0.0.1920.1040" timestamp="1629899332539" />
-    <state x="100" y="100" width="1720" height="840" key="VCS.FileHistoryDialog" timestamp="1630508030478">
+    <state x="100" y="100" width="1720" height="840" key="VCS.FileHistoryDialog" timestamp="1631558751215">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="100" y="100" width="1720" height="840" key="VCS.FileHistoryDialog/0.0.1920.1040/1920.181.1600.860@0.0.1920.1040" timestamp="1630508030478" />
+    <state x="100" y="100" width="1720" height="840" key="VCS.FileHistoryDialog/0.0.1920.1040/1920.181.1600.860@0.0.1920.1040" timestamp="1631558751215" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1630000695490">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.181.1600.860@0.0.1920.1040" timestamp="1630000695490" />
-    <state x="624" y="254" key="run.anything.popup" timestamp="1631019462251">
+    <state x="639" y="118" width="642" height="804" key="find.popup" timestamp="1631265828742">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="639" y="118" width="642" height="804" key="find.popup/0.0.1920.1040/1920.181.1600.860@0.0.1920.1040" timestamp="1631265828742" />
+    <state x="624" y="254" key="run.anything.popup" timestamp="1631263050649">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="624" y="254" key="run.anything.popup/-1920.1.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1631019462251" />
-    <state x="624" y="254" key="run.anything.popup/0.0.1920.1040/1920.181.1600.860@0.0.1920.1040" timestamp="1630324047464" />
+    <state x="624" y="254" key="run.anything.popup/0.0.1920.1040/1920.181.1600.860@0.0.1920.1040" timestamp="1631263050649" />
     <state x="1229" y="230" key="search.everywhere.popup" timestamp="1630959680659">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1229" y="230" key="search.everywhere.popup/-1920.1.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1630959680659" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Script/MapTool/WaveManager.cs</url>
+          <line>281</line>
+          <properties documentPath="D:\CraftSpaceShip\CraftSpaceShip\Assets\Script\MapTool\WaveManager.cs" initialLine="221">
+            <startOffsets>
+              <option value="10186" />
+            </startOffsets>
+            <endOffsets>
+              <option value="10187" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

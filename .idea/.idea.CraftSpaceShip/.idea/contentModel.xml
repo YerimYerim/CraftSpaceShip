@@ -2,13 +2,36 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\rabit\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\rabit\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_CraftSpaceShip.767035771.00" t="ExcludeRecursive" />
-    <e p="D:\Unity_practice\kpu-dev\CraftSpaceShip" t="IncludeRecursive">
+    <e p="C:\Users\rabit\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_CraftSpaceShip.-1999471620.00" t="ExcludeRecursive" />
+    <e p="D:\CraftSpaceShip\CraftSpaceShip" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="CubeSpace" t="Include">
+          <e p="CubeSpace_Enemy_Ships" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="EnemyDestroyByTime.cs" t="Include" />
+              <e p="EnemyMover.cs" t="Include" />
+              <e p="EnemyRandomMover.cs" t="Include" />
+              <e p="EnemyShip_01.cs" t="Include" />
+              <e p="EnemyShip_02.cs" t="Include" />
+              <e p="EnemyShip_03.cs" t="Include" />
+            </e>
+          </e>
+          <e p="CubeSpace_PlayerShips" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="DestroyByTime.cs" t="Include" />
+              <e p="Mover.cs" t="Include" />
+              <e p="PlayerShip_01.cs" t="Include" />
+              <e p="PlayerShip_02.cs" t="Include" />
+              <e p="PlayerShip_03.cs" t="Include" />
+              <e p="RandomMover.cs" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="Script" t="Include">
           <e p="BulletPattern" t="Include">
             <e p="Bullets.cs" t="Include" />
+            <e p="PlayerTurret.cs" t="Include" />
           </e>
           <e p="Controlloer" t="Include">
             <e p="JoyStickController.cs" t="Include" />

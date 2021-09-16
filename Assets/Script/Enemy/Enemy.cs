@@ -4,14 +4,14 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
-
+[Serializable]
 public enum EnemyType
 {
     MINI,
     MIDDLE,
     BOSS
 }
-
+[Serializable]
 public enum AttackPattern
 {
     ONE,
@@ -26,12 +26,13 @@ public enum AttackPattern
 //     FRONTBACK,
 //     BACKFRONT
 // }
-
+[Serializable]
 public enum RotationPattern
 {
     HALF,
     FULL    
 }
+[Serializable]
 public class Enemy : MonoBehaviour
 {
     [Header("Type")]

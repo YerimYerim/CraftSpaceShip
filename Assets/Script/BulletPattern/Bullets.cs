@@ -3,17 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-enum tempWall
-{
-    UP = 0 ,DOWN = 1,LEFT = 2,RIGHT = 3
-}
 public class Bullets : ObjectPoolManager
 {
     [SerializeField]private Transform StartPoint;
     void Awake()
     {
         Application.targetFrameRate = 60;
-        StartPoint = transform.parent.GetChild(0);
+        if (StartPoint == null)
+        {
+            StartPoint = transform.parent.GetChild(0);
+        }
     }
     public void ShootBullet(AttackPattern attackPattern , float speed , float time)
     {

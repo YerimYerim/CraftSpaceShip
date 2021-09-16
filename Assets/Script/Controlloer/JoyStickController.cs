@@ -31,8 +31,15 @@ public class JoyStickController : MonoBehaviour, IPointerDownHandler, IDragHandl
 
     void Update()
     {
-        if (isTouched)
+        if (isTouched )
         {
+            Vector3 pos = Camera.main.WorldToViewportPoint(playerTransform.position);
+            if (pos.x < 0f) pos.x = 0f;
+            if (pos.x > 1f) pos.x = 1f;
+            if (pos.y < 0f) pos.y = 0f;
+            if (pos.y > 1f) pos.y = 1f;
+        
+            playerTransform.position = Camera.main.ViewportToWorldPoint(pos);
             playerTransform.position += Velocity * Time.deltaTime * Math.Min(Distance , MaxDistance) * DPS * 0.1f;
         }
 
