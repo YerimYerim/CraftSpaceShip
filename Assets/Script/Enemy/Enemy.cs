@@ -19,13 +19,6 @@ public enum AttackPattern
     EIGHT
 }
 
-// public enum MovePattern
-// {
-//     LEFTRIGHT,
-//     ROUND,
-//     FRONTBACK,
-//     BACKFRONT
-// }
 [Serializable]
 public enum RotationPattern
 {
@@ -54,9 +47,16 @@ public class Enemy : MonoBehaviour
 
     [SerializeField] public bool isStart = false;
     [SerializeField] private Coroutine ShooterCoroutine;
+
+    [SerializeField] private GameObject DeadEffect;
+    [SerializeField] private Animator _animator;
+    [SerializeField] private Material _material;
     void Awake()
     {
         _bulletPattern.init();
+        DeadEffect = gameObject.transform.parent.GetChild(0).gameObject;
+        _animator = GetComponent<Animator>();
+        _material = gameObject.transform.GetChild(0).GetComponent<Material>();
     }
     void Update()
     {
@@ -154,6 +154,28 @@ public class Enemy : MonoBehaviour
                 break;
             default:
                 throw new ArgumentOutOfRangeException();
+        }
+    }
+
+    void OnTriggerEnter(Collider bullet)
+    {
+
+        if (bullet.name.Equals("Bullet_01(Clone)"))
+        {
+            bullet.gameObject.SetActive(false);
+            --HP;
+            if (HP < 0)
+            {
+                DeadEffect.transform.position = transform.position;
+                DeadEffect.SetActive(true);
+                gameObject.SetActive(false);
+                PlayerStatus.AddScore(_enemyType);
+                PlayerStatus.AddCombo();
+                
+            }
+            print("호에엥" + bullet.name);
+            _animator.SetBool("isHit", true);
+
         }
     }
 }

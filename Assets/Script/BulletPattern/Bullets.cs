@@ -8,7 +8,7 @@ public class Bullets : ObjectPoolManager
     [SerializeField]private Transform StartPoint;
     void Awake()
     {
-        Application.targetFrameRate = 60;
+        Application.targetFrameRate = 30;
         if (StartPoint == null)
         {
             StartPoint = transform.parent.GetChild(0);

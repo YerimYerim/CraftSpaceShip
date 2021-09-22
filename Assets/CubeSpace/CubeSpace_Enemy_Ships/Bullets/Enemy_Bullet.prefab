@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5478564}
   - component: {fileID: 11480272}
   - component: {fileID: 11463198}
+  - component: {fileID: -7218995686362792870}
   m_Layer: 0
   m_Name: Enemy_Bullet
   m_TagString: Untagged
@@ -76,6 +77,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifetime: 6
+--- !u!135 &-7218995686362792870
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108552}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &123430
 GameObject:
   m_ObjectHideFlags: 0
