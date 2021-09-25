@@ -22,14 +22,16 @@
     <list default="true" id="81cd2360-b819-4989-bfaf-4420b96072ea" name="Default Changelist" comment="Joystick Move soft even out of Controller">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CraftSpaceShip/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CraftSpaceShip/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CraftSpaceShip/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CraftSpaceShip/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CubeSpace/CubeSpace_Enemy_Ships/Bullets/Enemy_Bullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CubeSpace/CubeSpace_Enemy_Ships/Bullets/Enemy_Bullet.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CubeSpace/CubeSpace_PlayerShips/Bullets/Bullet_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CubeSpace/CubeSpace_PlayerShips/Bullets/Bullet_01.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/GameScoreStartAni 1.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/GameScoreStartAni 1.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/SocreBoardPannel.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/SocreBoardPannel.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/CraftSpaceShip.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CraftSpaceShip.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/BulletPattern/Bullets.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/BulletPattern/Bullets.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Enemy/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Enemy/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/meterial/New Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/meterial/New Material.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameEndScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameEndScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/GameOver/GameOverManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/GameOver/GameOverManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/MapTool/WaveManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/MapTool/MapToolWaveManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/MapTool/WaveManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/PlayerHP.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/PlayerHP.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/PlayerStatus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/PlayerStatus.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,8 +43,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Script/GameOver/GameOverManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/Player/WaveManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C7864A0E-AEB2-4B2A-999F-B177623D54B4/c5/b2a7104b/WaitForSeconds.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Enemy/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C7864A0E-AEB2-4B2A-999F-B177623D54B4/5b/66f88a95/SerializeField.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -59,8 +63,11 @@
         <option value="$PROJECT_DIR$/Assets/Script/Player/ScoreManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Enemy/Enemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Player/PlayerStatus.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/Player/PlayerHP.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/GameOver/GameOverManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Player/PlayerHP.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/GameOver/GameOverPannelManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/MapTool/MapToolWaveManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Player/WaveManager.cs" />
       </list>
     </option>
   </component>
@@ -113,6 +120,8 @@
       <workItem from="1632143004393" duration="10342000" />
       <workItem from="1632300011217" duration="11027000" />
       <workItem from="1632331016291" duration="70000" />
+      <workItem from="1632383444460" duration="5963000" />
+      <workItem from="1632467483787" duration="3055000" />
     </task>
     <task id="LOCAL-00001" summary="Joystick Move soft even out of Controller">
       <created>1630000663270</created>
@@ -153,10 +162,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="498" height="446" key="SwitcherDM/-1920.1.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1632310406840" />
-    <state x="100" y="100" width="1720" height="840" key="VCS.FileHistoryDialog" timestamp="1631558751215">
+    <state x="100" y="100" width="1720" height="840" key="VCS.FileHistoryDialog" timestamp="1632385671449">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="100" y="100" width="1720" height="840" key="VCS.FileHistoryDialog/0.0.1920.1040/1920.181.1600.860@0.0.1920.1040" timestamp="1631558751215" />
+    <state x="100" y="100" width="1720" height="840" key="VCS.FileHistoryDialog/0.0.1920.1040/1920.181.1600.860@0.0.1920.1040" timestamp="1632385671449" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1630000695490">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

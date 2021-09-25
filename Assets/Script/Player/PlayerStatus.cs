@@ -11,8 +11,12 @@ public class PlayerStatus : MonoBehaviour
     public static int _HP = 20;
     public static int _ComboCount = 1;
     public static int _ScoreCount = 0;
+    public static int _BestScore = 0;
+    public static int _MaxCombo = 1;
+    
     public static bool isCoroutineStart = false;
     public static bool isGameEnd = false;
+
     
     private static Text _scoreTextUI;
     private static Text _comboTextUI;

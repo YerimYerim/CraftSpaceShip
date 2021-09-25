@@ -21,7 +21,7 @@ public class Serialization<T>
     }
 };
 [Serializable]
-public class WaveManager : MonoBehaviour
+public class MapToolWaveManager : MonoBehaviour
 {
     [Serializable]
     public class Wave

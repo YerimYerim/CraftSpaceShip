@@ -28,11 +28,16 @@ public class PlayerHP : MonoBehaviour
     {
         if (other.gameObject.name.Equals("Enemy_Bullet(Clone)") || other.gameObject.CompareTag("ENEMY") )
         {
-            PlayerStatus.HitPlayer();
+
+            if (PlayerStatus._HP <= 0)
+            {
+                PlayerStatus.isGameEnd = true;
+                return;
+            }
             HpImages[PlayerStatus._HP-1].SetActive(false);
+            PlayerStatus.HitPlayer();
             HitEffect.SetActive(true);
-  
-            
+
             if (PlayerStatus.isCoroutineStart == false)
             {
                 PlayerStatus.isCoroutineStart = true;
@@ -45,10 +50,7 @@ public class PlayerHP : MonoBehaviour
                 print("sd");
             }
 
-            if (PlayerStatus._HP < 0)
-            {
-                PlayerStatus.isGameEnd = true;
-            }
+
         }
     }
 
