@@ -1,38 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
-    <select />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="81cd2360-b819-4989-bfaf-4420b96072ea" name="Default Changelist" comment="Joystick Move soft even out of Controller">
+    <list default="true" id="8a1e00c3-8cb6-4325-8b63-16678579c924" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CraftSpaceShip/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CraftSpaceShip/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CraftSpaceShip/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CraftSpaceShip/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/GameScoreStartAni 1.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/GameScoreStartAni 1.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/SocreBoardPannel.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/SocreBoardPannel.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CraftSpaceShip.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CraftSpaceShip.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameEndScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameEndScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/GameOver/GameOverManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/GameOver/GameOverManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/MapTool/WaveManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/MapTool/MapToolWaveManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/MapTool/WaveManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/PlayerHP.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/PlayerHP.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/PlayerStatus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/PlayerStatus.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/StartScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/StartScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/StartScene/StartPanelManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/StartScene/StartPanelManager.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,36 +17,16 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Script/Player/WaveManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C7864A0E-AEB2-4B2A-999F-B177623D54B4/c5/b2a7104b/WaitForSeconds.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Script/Enemy/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C7864A0E-AEB2-4B2A-999F-B177623D54B4/5b/66f88a95/SerializeField.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8F9A7EA3-47A4-4FFD-AD6C-91B550598CCD/32/370b8592/Void.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Script/PlayerControl.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/BulletPattern/BulletPattern.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/ObjectPolling/ObjectPoolManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/FrameCheck/FrameCheck.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/MapTool/WaveManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/Controlloer/JoyStickController.cs" />
-        <option value="$PROJECT_DIR$/Assets/#NVJOB Dynamic Sky/#NVJOB Dynamic Sky/DynamicSky.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/BulletPattern/PlayerTurret.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/BulletPattern/Bullets.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/Player/ScoreManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/Enemy/Enemy.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/Player/PlayerStatus.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/GameOver/GameOverManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/Player/PlayerHP.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/GameOver/GameOverPannelManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/MapTool/MapToolWaveManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/Player/WaveManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/StartScene/StartSceneManager.cs" />
       </list>
     </option>
   </component>
-  <component name="ProjectId" id="1xB9tpPeQa7oi2pLT2ososGzUVG" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="1ygFCcSpZli2MoMSGGhJvWUnL0o" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -80,108 +34,20 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="81cd2360-b819-4989-bfaf-4420b96072ea" name="Default Changelist" comment="" />
-      <created>1629817836057</created>
+      <changelist id="8a1e00c3-8cb6-4325-8b63-16678579c924" name="Default Changelist" comment="" />
+      <created>1632665201461</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1629817836057</updated>
-      <workItem from="1629817854937" duration="22000" />
-      <workItem from="1629898305367" duration="923000" />
-      <workItem from="1629899300046" duration="4721000" />
-      <workItem from="1629975557575" duration="1444000" />
-      <workItem from="1629978780099" duration="8800000" />
-      <workItem from="1630002833578" duration="1024000" />
-      <workItem from="1630077629788" duration="5319000" />
-      <workItem from="1630231545521" duration="6012000" />
-      <workItem from="1630308062418" duration="22581000" />
-      <workItem from="1630406369580" duration="5832000" />
-      <workItem from="1630426151875" duration="8610000" />
-      <workItem from="1630498020939" duration="10608000" />
-      <workItem from="1630569537951" duration="2542000" />
-      <workItem from="1630920628884" duration="12857000" />
-      <workItem from="1631019408103" duration="20625000" />
-      <workItem from="1631254811519" duration="10539000" />
-      <workItem from="1631281309859" duration="2876000" />
-      <workItem from="1631385027513" duration="2313000" />
-      <workItem from="1631522584055" duration="10865000" />
-      <workItem from="1631553287063" duration="6987000" />
-      <workItem from="1631592637899" duration="682000" />
-      <workItem from="1631621500568" duration="2510000" />
-      <workItem from="1631668199272" duration="562000" />
-      <workItem from="1631668916776" duration="6108000" />
-      <workItem from="1631711415235" duration="11687000" />
-      <workItem from="1632059933934" duration="7540000" />
-      <workItem from="1632143004393" duration="10342000" />
-      <workItem from="1632300011217" duration="11027000" />
-      <workItem from="1632331016291" duration="70000" />
-      <workItem from="1632383444460" duration="5963000" />
-      <workItem from="1632467483787" duration="3055000" />
+      <updated>1632665201461</updated>
+      <workItem from="1632665211109" duration="7247000" />
     </task>
-    <task id="LOCAL-00001" summary="Joystick Move soft even out of Controller">
-      <created>1630000663270</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1630000663270</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Joystick Move soft even out of Controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="Joystick Move soft even out of Controller" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="760" y="220" key="RiderGenerateDialog" timestamp="1629899332539">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="760" y="220" key="RiderGenerateDialog/0.0.1920.1040/1920.181.1600.860@0.0.1920.1040" timestamp="1629899332539" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1632310406840">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="498" height="446" key="SwitcherDM/-1920.1.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1632310406840" />
-    <state x="100" y="100" width="1720" height="840" key="VCS.FileHistoryDialog" timestamp="1632385671449">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="100" y="100" width="1720" height="840" key="VCS.FileHistoryDialog/0.0.1920.1040/1920.181.1600.860@0.0.1920.1040" timestamp="1632385671449" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1630000695490">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.181.1600.860@0.0.1920.1040" timestamp="1630000695490" />
-    <state x="639" y="118" width="642" height="804" key="find.popup" timestamp="1631265828742">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="639" y="118" width="642" height="804" key="find.popup/0.0.1920.1040/1920.181.1600.860@0.0.1920.1040" timestamp="1631265828742" />
-    <state x="624" y="254" key="run.anything.popup" timestamp="1632307553431">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="624" y="254" key="run.anything.popup/-1920.1.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1632307553431" />
-    <state x="624" y="254" key="run.anything.popup/0.0.1920.1040/1920.181.1600.860@0.0.1920.1040" timestamp="1631263050649" />
-    <state x="1229" y="230" width="672" height="678" key="search.everywhere.popup" timestamp="1632309683727">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="1229" y="230" width="672" height="678" key="search.everywhere.popup/-1920.1.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1632309683727" />
   </component>
 </project>

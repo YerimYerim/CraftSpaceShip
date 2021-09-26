@@ -58,7 +58,7 @@
             <e p="WaveManager.cs" t="Include" />
           </e>
           <e p="StartScene" t="Include">
-            <e p="StartPanelManager.cs" t="Include" />
+            <e p="StartSceneManager.cs" t="Include" />
           </e>
         </e>
         <e p="SimplePixelUI" t="Include">
