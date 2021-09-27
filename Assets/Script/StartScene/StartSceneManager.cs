@@ -41,6 +41,7 @@ public class StartSceneManager : MonoBehaviour
     [Header("LineRenderer")]
     [SerializeField] private List<LineRenderer> TurretToButtonLines;
 
+
     void Awake()
     {
         StartPannel = GameObject.Find("StartPanel");
@@ -59,16 +60,24 @@ public class StartSceneManager : MonoBehaviour
 
         
         TurretPosButtons = new List<Button>();
-       
+        TurretToButtonLines = new List<LineRenderer>();
         //ShipObject.transform.GetChild(0).GetChild(0).GetChild(i).position
         for (int i = 0; i <GameObject.Find("SelectPositionButtons").transform.childCount; i++)
         {
             int num = i;
             TurretPosButtons.Add(GameObject.Find("SelectPositionButtons").transform.GetChild(i).GetComponent<Button>());
+            TurretToButtonLines.Add(GameObject.Find("SelectPositionButtons").transform.GetChild(i).GetComponent<LineRenderer>());
             TurretPosButtons[i].onClick.AddListener(delegate { TurretPosButtonOnClick(num); });
         }
         
-        
+        for (int i = 0; i < TurretPosButtons.Count; ++i)
+        {
+            Vector3 btnPos = TurretPosButtons[i].transform.GetChild(1).transform.position;
+
+            TurretToButtonLines[i].positionCount = 2;
+            TurretToButtonLines[i].SetPosition(0 ,btnPos);
+            TurretToButtonLines[i].SetPosition(1 , GameObject.Find("TurretsPosition").transform.GetChild(i).transform.position);
+        }    
         
         HaveToPayGoldText = GameObject.Find("HaveToPayGoldText").GetComponent<Text>();
         TurretNameText = GameObject.Find("TurretNameText").GetComponent<Text>();
@@ -94,11 +103,13 @@ public class StartSceneManager : MonoBehaviour
         }
         
         CraftZonePannel.SetActive(false);
+        ShipModelAnimator.SetBool("isRotateRight" , false);
+        ShipModelAnimator.SetBool("isRotateLeft", true);
     }
 
     private void TurretPosButtonOnClick(int num)
     {
-
+        
         print(num);
     }
 
@@ -115,6 +126,12 @@ public class StartSceneManager : MonoBehaviour
         
         ShipModelAnimator.SetBool("isRotateRight" , true);
         ShipModelAnimator.SetBool("isRotateLeft", false);
+        for (int i = 0; i < TurretPosButtons.Count; ++i)
+        {
+            TurretToButtonLines[i].startWidth = 0.1f;
+            TurretToButtonLines[i].endWidth = 0.1f;
+        }
+
     }
     private void BackButtonOnClick()
     {              
@@ -126,6 +143,12 @@ public class StartSceneManager : MonoBehaviour
         
         ShipModelAnimator.SetBool("isRotateRight" , false);
         ShipModelAnimator.SetBool("isRotateLeft", true);
+        
+        for (int i = 0; i < TurretPosButtons.Count; ++i)
+        {
+            TurretToButtonLines[i].startWidth = 0;
+            TurretToButtonLines[i].endWidth = 0;
+        }
     }
     
 }

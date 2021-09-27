@@ -6,7 +6,7 @@ using UnityEngine;
 //터렛 위치에 따라서 나와야함
 //터렛 위치 5군데
 
-enum TurretPosition
+public enum TurretPosition
 {
     RIGHTFRONT,
     LEFTFRONT,

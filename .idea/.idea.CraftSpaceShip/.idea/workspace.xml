@@ -20,13 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8a1e00c3-8cb6-4325-8b63-16678579c924" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/StartSceneShip.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/StartSceneShip.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/StartSceneShip.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/StartSceneShip.controller.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CraftSpaceShip/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CraftSpaceShip/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CraftSpaceShip MapTool.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CraftSpaceShip MapTool.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CraftSpaceShip.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CraftSpaceShip.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CraftSpaceShip/riderModule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CraftSpaceShip/riderModule.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/StartScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/StartScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/StartScene/StartSceneManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/StartScene/StartSceneManager.cs" afterDir="false" />
     </list>
@@ -72,7 +67,8 @@
       <workItem from="1632665211109" duration="7437000" />
       <workItem from="1632702441709" duration="9422000" />
       <workItem from="1632734913336" duration="7837000" />
-      <workItem from="1632749990141" duration="3845000" />
+      <workItem from="1632749990141" duration="7709000" />
+      <workItem from="1632759472397" duration="5225000" />
     </task>
     <servers />
   </component>
