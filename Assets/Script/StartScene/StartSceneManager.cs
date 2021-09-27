@@ -19,6 +19,7 @@ public class StartSceneManager : MonoBehaviour
     [SerializeField] private Button SettingButton;
     [SerializeField] private Button OpenInfoButton;
     [SerializeField] private Button UpgradeButton;
+    [SerializeField] private Button BackButton;
 
     [Header("Text")] 
     [SerializeField] private Text HaveToPayGoldText;
@@ -48,8 +49,8 @@ public class StartSceneManager : MonoBehaviour
         OpenInfoButton = GameObject.Find("InfoButton").GetComponent<Button>();
         UpgradeButton = GameObject.Find("UpgradeButton").GetComponent<Button>();
         GameStartButton = GameObject.Find("GameStartButton").GetComponent<Button>();
-        
-        
+
+        BackButton = GameObject.Find("BackButton").GetComponent<Button>();
         
         HaveToPayGoldText = GameObject.Find("HaveToPayGoldText").GetComponent<Text>();
         TurretNameText = GameObject.Find("TurretNameText").GetComponent<Text>();
@@ -68,6 +69,10 @@ public class StartSceneManager : MonoBehaviour
         if (StartButton != null)
         {
             StartButton.onClick.AddListener(delegate { StartButtonOnClick(); });
+        }      
+        if (BackButton != null)
+        {
+            BackButton.onClick.AddListener(delegate { BackButtonOnClick(); });
         }
 
         
@@ -76,22 +81,52 @@ public class StartSceneManager : MonoBehaviour
 
     private void StartButtonOnClick()
     {              
+        CraftZonePannel.SetActive(false); 
+        StartSceneAnimator.SetBool("isEnter", false);
         StartSceneAnimator.SetBool("isOut", true);
+        
+        
         CraftZonePannel.SetActive(true);  
+        CraftZoneAnimator.SetBool("isOut", false);
         CraftZoneAnimator.SetBool("isEnter", true);
         
         StartCoroutine(rotatingModel());
+    }
+    private void BackButtonOnClick()
+    {              
+        StartSceneAnimator.SetBool("isEnter", true);
+        StartSceneAnimator.SetBool("isOut", false);
+
+        CraftZoneAnimator.SetBool("isOut", true);
+        CraftZoneAnimator.SetBool("isEnter", false);
+
+        StartCoroutine(reverseRotatingModel());
+        
+        //CraftZonePannel.SetActive(false);  
     }
 
     IEnumerator rotatingModel()
     {
     
-        while (ShipObject.transform.rotation.x < -0.5)
+        while (ShipObject.transform.eulerAngles.x >90)
         {
             ShipObject.transform.Rotate(0,1f,0f);
-            
             yield return new WaitForSeconds(0.001f);
         }
         
     }
+    IEnumerator reverseRotatingModel()
+    {
+    
+        while (ShipObject.transform.eulerAngles.x < 270)
+        {
+            ShipObject.transform.Rotate(0,1f,0f);
+            
+            yield return new WaitForSeconds(0.001f);
+            
+        }
+
+    }
+
+ 
 }
