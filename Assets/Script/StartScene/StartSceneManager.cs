@@ -41,7 +41,15 @@ public class StartSceneManager : MonoBehaviour
     [Header("LineRenderer")]
     [SerializeField] private List<LineRenderer> TurretToButtonLines;
 
+    private struct Turretinfo
+    {
+        public AttackPattern _attackPattern;
+        public int _turretsLevel;
+        public Sprite _sprite;
+    }
 
+    [SerializeField] private List<Turretinfo> _turretinfos;
+    [SerializeField] private List<AttackPattern> _playerTurretAttackPatterns;
     void Awake()
     {
         StartPannel = GameObject.Find("StartPanel");
@@ -92,6 +100,9 @@ public class StartSceneManager : MonoBehaviour
         CraftZoneAnimator = CraftZonePannel.GetComponent<Animator>();
         StartSceneAnimator = StartPannel.GetComponent<Animator>();
         ShipModelAnimator = ShipObject.GetComponent<Animator>();
+        
+        
+        _turretinfos = new List<Turretinfo>();
         
         if (StartButton != null)
         {

@@ -39,7 +39,7 @@ public class PlayerTurret : MonoBehaviour
             TurretsBullets.Add(transform.parent.GetChild(1+i).GetComponent<Bullets>());
             AttackPatterns.Add(AttackPattern.ONE);
             TurretsLevel.Add(1);
-            Speed.Add(5);
+            Speed.Add(TurretsLevel[i] * 1.5f);
         }
         for (int i = 0; i < TurretsCount; ++i)
         {
@@ -57,11 +57,6 @@ public class PlayerTurret : MonoBehaviour
         }
     }
 
-    void FixedUpdate()
-    {
-
-    }
-    
     public IEnumerator ShootTimer(float BulletShootSpeed ,AttackPattern attackPattern, float bulletSpeed, Bullets bullet )
     {
         while (gameObject.activeSelf)
