@@ -19,7 +19,7 @@ public class StartSceneManager : MonoBehaviour
     [SerializeField] private Button OpenInfoButton;
     [SerializeField] private Button UpgradeButton;
     [SerializeField] private Button BackButton;
-    [SerializeField] private List<Button> SelectPositionButtons;
+    [SerializeField] private List<Button> TurretPosButtons;
 
     [Header("Text")] 
     [SerializeField] private Text HaveToPayGoldText;
@@ -36,6 +36,11 @@ public class StartSceneManager : MonoBehaviour
     
     [SerializeField] private Animator CraftZoneAnimator;
     [SerializeField] private Animator StartSceneAnimator;   
+    [SerializeField] private Animator ShipModelAnimator;
+
+    [Header("LineRenderer")]
+    [SerializeField] private List<LineRenderer> TurretToButtonLines;
+
     void Awake()
     {
         StartPannel = GameObject.Find("StartPanel");
@@ -51,6 +56,19 @@ public class StartSceneManager : MonoBehaviour
         GameStartButton = GameObject.Find("GameStartButton").GetComponent<Button>();
 
         BackButton = GameObject.Find("BackButton").GetComponent<Button>();
+
+        
+        TurretPosButtons = new List<Button>();
+       
+        //ShipObject.transform.GetChild(0).GetChild(0).GetChild(i).position
+        for (int i = 0; i <GameObject.Find("SelectPositionButtons").transform.childCount; i++)
+        {
+            int num = i;
+            TurretPosButtons.Add(GameObject.Find("SelectPositionButtons").transform.GetChild(i).GetComponent<Button>());
+            TurretPosButtons[i].onClick.AddListener(delegate { TurretPosButtonOnClick(num); });
+        }
+        
+        
         
         HaveToPayGoldText = GameObject.Find("HaveToPayGoldText").GetComponent<Text>();
         TurretNameText = GameObject.Find("TurretNameText").GetComponent<Text>();
@@ -64,7 +82,7 @@ public class StartSceneManager : MonoBehaviour
 
         CraftZoneAnimator = CraftZonePannel.GetComponent<Animator>();
         StartSceneAnimator = StartPannel.GetComponent<Animator>();
-        
+        ShipModelAnimator = ShipObject.GetComponent<Animator>();
         
         if (StartButton != null)
         {
@@ -78,6 +96,12 @@ public class StartSceneManager : MonoBehaviour
         CraftZonePannel.SetActive(false);
     }
 
+    private void TurretPosButtonOnClick(int num)
+    {
+
+        print(num);
+    }
+
     private void StartButtonOnClick()
     {              
         CraftZonePannel.SetActive(false); 
@@ -89,7 +113,8 @@ public class StartSceneManager : MonoBehaviour
         CraftZoneAnimator.SetBool("isOut", false);
         CraftZoneAnimator.SetBool("isEnter", true);
         
-        StartCoroutine(rotatingModel());
+        ShipModelAnimator.SetBool("isRotateRight" , true);
+        ShipModelAnimator.SetBool("isRotateLeft", false);
     }
     private void BackButtonOnClick()
     {              
@@ -98,31 +123,9 @@ public class StartSceneManager : MonoBehaviour
 
         CraftZoneAnimator.SetBool("isOut", true);
         CraftZoneAnimator.SetBool("isEnter", false);
-
-        StartCoroutine(reverseRotatingModel());
         
-        //CraftZonePannel.SetActive(false);  
+        ShipModelAnimator.SetBool("isRotateRight" , false);
+        ShipModelAnimator.SetBool("isRotateLeft", true);
     }
-
-    IEnumerator rotatingModel()
-    {
     
-        while (ShipObject.transform.eulerAngles.x >90)
-        {
-            ShipObject.transform.Rotate(0,200f * Time.deltaTime,0f);
-            yield return new WaitForSeconds(0.01f);
-        }
-        
-    }
-    IEnumerator reverseRotatingModel()
-    {
-    
-        while (ShipObject.transform.eulerAngles.x < 270)
-        {
-            ShipObject.transform.Rotate(0,200f * Time.deltaTime,0f);
-            yield return new WaitForSeconds(0.01f);
-        }
-    }
-
- 
 }

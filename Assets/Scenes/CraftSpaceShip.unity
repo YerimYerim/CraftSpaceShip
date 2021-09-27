@@ -53968,7 +53968,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemyType: 0
   _attackPattern: 0
-  HP: 2147483647
+  HP: 10
   _path:
   - {x: 2.09, y: -0.8, z: 0.92}
   - {x: -2.25, y: -0.8, z: -0.53}

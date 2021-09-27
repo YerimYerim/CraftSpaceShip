@@ -826,6 +826,9 @@ MonoBehaviour:
   _bulletShootSpeed: 1
   _bulletMoveSpeed: 10
   isStart: 0
+  DeadEffect: {fileID: 0}
+  _animator: {fileID: 0}
+  _material: {fileID: 0}
 --- !u!1 &127426469
 GameObject:
   m_ObjectHideFlags: 0
@@ -1713,6 +1716,9 @@ MonoBehaviour:
   _bulletShootSpeed: 0.1
   _bulletMoveSpeed: 30
   isStart: 0
+  DeadEffect: {fileID: 0}
+  _animator: {fileID: 0}
+  _material: {fileID: 0}
 --- !u!65 &228063755
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2664,6 +2670,9 @@ MonoBehaviour:
   _bulletShootSpeed: 0.08
   _bulletMoveSpeed: 5
   isStart: 0
+  DeadEffect: {fileID: 0}
+  _animator: {fileID: 0}
+  _material: {fileID: 0}
 --- !u!65 &561560638
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13935,7 +13944,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1818049596}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83ff447c3ea167c418653098f7c2545b, type: 3}
+  m_Script: {fileID: 11500000, guid: e65276ddd89047048bc5e9fa79bd0f08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyModelPrefab: {fileID: 0}
@@ -13946,7 +13955,7 @@ MonoBehaviour:
   PointPrefab: {fileID: 6235785458192247931, guid: b5fc309ea99d762448559ae96aee6eda,
     type: 3}
   nowWaveNum: -1
-  nowMaxWaveNum: 0
+  nowMaxWaveNum: -1
   addWaveButton: {fileID: 0}
   deleteWaveButton: {fileID: 0}
   waveSelectButton: {fileID: 0}
