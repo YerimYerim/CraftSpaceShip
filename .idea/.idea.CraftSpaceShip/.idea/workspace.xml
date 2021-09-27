@@ -20,14 +20,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8a1e00c3-8cb6-4325-8b63-16678579c924" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/CraftZoneAni.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/CraftZoneAni.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/MoveLeft.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/MoveLeft.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/MoveRight.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/MoveRight.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/StartAnimator.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/StartAnimator.controller.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CraftSpaceShip/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CraftSpaceShip/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/StartScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/StartScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/StartScene/StartSceneManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/StartScene/StartSceneManager.cs" afterDir="false" />
@@ -72,7 +64,8 @@
       <option name="presentableId" value="Default" />
       <updated>1632665201461</updated>
       <workItem from="1632665211109" duration="7437000" />
-      <workItem from="1632702441709" duration="8630000" />
+      <workItem from="1632702441709" duration="9422000" />
+      <workItem from="1632734913336" duration="3436000" />
     </task>
     <servers />
   </component>
@@ -89,6 +82,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />

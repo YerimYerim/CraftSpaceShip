@@ -79,8 +79,19 @@ public class StartSceneManager : MonoBehaviour
         StartSceneAnimator.SetBool("isOut", true);
         CraftZonePannel.SetActive(true);  
         CraftZoneAnimator.SetBool("isEnter", true);
-        ShipObject.transform.Rotate(0,90,0);
+        
+        StartCoroutine(rotatingModel());
+    }
 
-
+    IEnumerator rotatingModel()
+    {
+    
+        while (ShipObject.transform.rotation.x < -0.5)
+        {
+            ShipObject.transform.Rotate(0,1f,0f);
+            
+            yield return new WaitForSeconds(0.001f);
+        }
+        
     }
 }
