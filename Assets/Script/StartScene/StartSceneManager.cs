@@ -9,8 +9,7 @@ public class StartSceneManager : MonoBehaviour
     [SerializeField] private GameObject StartPannel;
     [SerializeField] private GameObject CraftZonePannel;
     [SerializeField] private GameObject ShipObject;
-    
-    
+
     [Header("Buttons")]
     [SerializeField] private Button StartButton;
     [SerializeField] private Button GameStartButton;
@@ -20,6 +19,7 @@ public class StartSceneManager : MonoBehaviour
     [SerializeField] private Button OpenInfoButton;
     [SerializeField] private Button UpgradeButton;
     [SerializeField] private Button BackButton;
+    [SerializeField] private List<Button> SelectPositionButtons;
 
     [Header("Text")] 
     [SerializeField] private Text HaveToPayGoldText;
@@ -74,7 +74,6 @@ public class StartSceneManager : MonoBehaviour
         {
             BackButton.onClick.AddListener(delegate { BackButtonOnClick(); });
         }
-
         
         CraftZonePannel.SetActive(false);
     }
@@ -110,8 +109,8 @@ public class StartSceneManager : MonoBehaviour
     
         while (ShipObject.transform.eulerAngles.x >90)
         {
-            ShipObject.transform.Rotate(0,1f,0f);
-            yield return new WaitForSeconds(0.001f);
+            ShipObject.transform.Rotate(0,200f * Time.deltaTime,0f);
+            yield return new WaitForSeconds(0.01f);
         }
         
     }
@@ -120,12 +119,9 @@ public class StartSceneManager : MonoBehaviour
     
         while (ShipObject.transform.eulerAngles.x < 270)
         {
-            ShipObject.transform.Rotate(0,1f,0f);
-            
-            yield return new WaitForSeconds(0.001f);
-            
+            ShipObject.transform.Rotate(0,200f * Time.deltaTime,0f);
+            yield return new WaitForSeconds(0.01f);
         }
-
     }
 
  
