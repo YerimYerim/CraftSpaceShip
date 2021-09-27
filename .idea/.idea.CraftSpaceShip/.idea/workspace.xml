@@ -1,12 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="8a1e00c3-8cb6-4325-8b63-16678579c924" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.CraftSpaceShip/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CraftSpaceShip/.idea/contentModel.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animation/CraftZoneAni.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animation/CraftZoneAni.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animation/MoveLeft.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animation/MoveLeft.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animation/MoveRight.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animation/MoveRight.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animation/StartAnimator.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animation/StartAnimator.controller.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CraftSpaceShip/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CraftSpaceShip/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/StartScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/StartScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/StartScene/StartPanelManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/StartScene/StartPanelManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/StartScene/StartSceneManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/StartScene/StartSceneManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,11 +51,15 @@
     </option>
   </component>
   <component name="ProjectId" id="1ygFCcSpZli2MoMSGGhJvWUnL0o" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
@@ -43,11 +71,26 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632665201461</updated>
-      <workItem from="1632665211109" duration="7247000" />
+      <workItem from="1632665211109" duration="7437000" />
+      <workItem from="1632702441709" duration="8630000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
