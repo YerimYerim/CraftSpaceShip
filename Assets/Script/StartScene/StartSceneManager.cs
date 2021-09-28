@@ -149,8 +149,8 @@ public class StartSceneManager : MonoBehaviour
         TurretShootBeforeSpeedText = GameObject.Find("TurretShootBeforeSpeedText").GetComponent<Text>();
         TurretShootAfterSpeedText = GameObject.Find("TurretShootAfterSpeedText").GetComponent<Text>();    
         TurretLevelText = GameObject.Find("NowSelectTurretLevelText").GetComponent<Text>();
-
-
+        
+        
         CraftZoneAnimator = CraftZonePannel.GetComponent<Animator>();
         StartSceneAnimator = StartPannel.GetComponent<Animator>();
         ShipModelAnimator = ShipObject.GetComponent<Animator>();
@@ -236,10 +236,15 @@ public class StartSceneManager : MonoBehaviour
 
         TurretNameText.text = _turretinfos[num]._name;
         TurretInfoText.text = _turretinfos[num]._info;
+        
         TurretDamegeBeforeText.text = _turretinfos[num]._damage.ToString();
         TurretDamegeAfterText.text = SetTurretDamage(_turretinfos[num], _turretinfos[num]._level + 1).ToString();
-        TurretShootBeforeSpeedText.text = SetTurretSpeed(_turretinfos[num]).ToString();
+        TurretDamegeAfterText.color = Color.blue;
+        
+        TurretShootBeforeSpeedText.text  = _turretinfos[num]._speed.ToString();
         TurretShootAfterSpeedText.text = SetTurretSpeed(_turretinfos[num], _turretinfos[num]._level + 1).ToString();
+        TurretShootAfterSpeedText.color = Color.blue;
+        
         TurretLevelText.text = _turretinfos[num]._level.ToString();
         HaveToPayGoldText.text = (_turretinfos[num]._level * 100).ToString();
     }
