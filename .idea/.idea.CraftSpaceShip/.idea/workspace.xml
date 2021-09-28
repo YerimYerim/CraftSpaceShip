@@ -21,7 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8a1e00c3-8cb6-4325-8b63-16678579c924" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CraftSpaceShip/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CraftSpaceShip/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/StartScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/StartScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/StartScene/StartSceneManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/StartScene/StartSceneManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -74,7 +73,7 @@
       <workItem from="1632749990141" duration="7709000" />
       <workItem from="1632759472397" duration="8349000" />
       <workItem from="1632805140769" duration="13160000" />
-      <workItem from="1632842965531" duration="8453000" />
+      <workItem from="1632842965531" duration="9462000" />
     </task>
     <servers />
   </component>

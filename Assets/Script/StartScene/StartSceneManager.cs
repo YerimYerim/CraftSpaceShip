@@ -129,13 +129,21 @@ public class StartSceneManager : MonoBehaviour
 
            //print("level" + turretinfo._level  + " damge "+ turretinfo._damage +"speed"+ turretinfo._speed);
             _turretinfos[i] = turretinfo;
+
         }
         
         for (int i = 0; i < GameObject.Find("TypesContent").transform.childCount; ++i)
         {
             TurretTypeButtons.Add(GameObject.Find("TypesContent").transform.GetChild(i).GetComponent<Button>());
+
             int temp = i;
             TurretTypeButtons[i].onClick.AddListener(delegate { TurretTypeButtonsOnClick(temp); });
+            if(i < _turretinfos.Count)
+            {
+                
+                TurretTypeButtons[i].transform.GetChild(1).GetComponent<Text>().text = "Lv "+ _turretinfos[i]._level ;
+                
+            }
         }
 
         //getINFO
@@ -307,31 +315,10 @@ public class StartSceneManager : MonoBehaviour
     private void TurretTypeButtonsOnClick(int num)
     {
 
-        TurretNameText.text = _turretinfos[num]._name;
-        TurretInfoText.text = _turretinfos[num]._info;
-        
-        TurretDamegeBeforeText.text = _turretinfos[num]._damage.ToString();
-        TurretDamegeAfterText.text = SetTurretDamage(_turretinfos[num], _turretinfos[num]._level + 1).ToString();
-        TurretDamegeAfterText.color = Color.blue;
-        
-        TurretShootBeforeSpeedText.text  = _turretinfos[num]._speed.ToString();
-        TurretShootAfterSpeedText.text = SetTurretSpeed(_turretinfos[num], _turretinfos[num]._level + 1).ToString();
-        TurretShootAfterSpeedText.color = Color.blue;
-        
-        TurretLevelText.text = _turretinfos[num]._level.ToString();
-        if (GetLevelPerNeedGold(num) < GoldCount)
-        {
-            HaveToPayGoldText.color = Color.red;
-        }
-        else
-        {
-            HaveToPayGoldText.color = Color.black;
-        }
-        HaveToPayGoldText.text = GetLevelPerNeedGold(num).ToString();
-
         SelectedTurretType = num;
-       
+        UpdateInfoUI();
     }
+
 
     private int GetLevelPerNeedGold(int num)
     {
@@ -342,13 +329,16 @@ public class StartSceneManager : MonoBehaviour
     {
         if (GoldCount >= GetLevelPerNeedGold(SelectedTurretType))
         {
+            GoldCount -= GetLevelPerNeedGold(SelectedTurretType);
+            GoldCountText.text = GoldCount.ToString();
+            
             var turretinfo = _turretinfos[SelectedTurretType];
             turretinfo._level += 1;
             SaveTurretInfoLevel(turretinfo._level, turretinfo);
             turretinfo._speed = SetTurretSpeed(turretinfo);
             turretinfo._damage = SetTurretDamage(turretinfo);
-            
             _turretinfos[SelectedTurretType]  = turretinfo;
+            UpdateInfoUI();
         }
         else
         {
@@ -361,5 +351,35 @@ public class StartSceneManager : MonoBehaviour
         GoldCount += 100;
         PlayerPrefs.SetInt("GoldCount", GoldCount);
         GoldCountText.text = GoldCount.ToString();
+    }
+
+    private void UpdateInfoUI()
+    {
+        TurretNameText.text = _turretinfos[SelectedTurretType]._name;
+        TurretInfoText.text = _turretinfos[SelectedTurretType]._info;
+        
+        TurretDamegeBeforeText.text = _turretinfos[SelectedTurretType]._damage.ToString();
+        TurretDamegeAfterText.text = SetTurretDamage(_turretinfos[SelectedTurretType], _turretinfos[SelectedTurretType]._level + 1).ToString();
+        TurretDamegeAfterText.color = Color.blue;
+        
+        TurretShootBeforeSpeedText.text  = _turretinfos[SelectedTurretType]._speed.ToString();
+        TurretShootAfterSpeedText.text = SetTurretSpeed(_turretinfos[SelectedTurretType], _turretinfos[SelectedTurretType]._level + 1).ToString();
+        TurretShootAfterSpeedText.color = Color.blue;
+        
+        TurretLevelText.text = _turretinfos[SelectedTurretType]._level.ToString();
+        if (GetLevelPerNeedGold(SelectedTurretType) > GoldCount)
+        {
+            HaveToPayGoldText.color = Color.red;
+        }
+        else
+        {
+            HaveToPayGoldText.color = Color.black;
+        }
+
+        TurretTypeButtons[SelectedTurretType].transform.GetChild(1).GetComponent<Text>().text = "Lv "+
+            _turretinfos[SelectedTurretType]._level ;
+        HaveToPayGoldText.text = GetLevelPerNeedGold(SelectedTurretType).ToString();
+        
+        
     }
 }
