@@ -20,6 +20,7 @@ public class StartSceneManager : MonoBehaviour
     [SerializeField] private Button UpgradeButton;
     [SerializeField] private Button BackButton;
     [SerializeField] private List<Button> TurretPosButtons;
+    [SerializeField] private List<Button> TurretTypeButtons;
 
     [Header("Text")] 
     [SerializeField] private Text HaveToPayGoldText;
@@ -43,8 +44,15 @@ public class StartSceneManager : MonoBehaviour
 
     private struct Turretinfo
     {
+        //xml 로부터 읽어오는 db
         public AttackPattern _attackPattern;
-        public int _turretsLevel;
+        public string _info;
+        public string _name;
+        //유저가 가지고있는 정보
+        public int _level;
+        public int _speed;
+        public int _damage;
+        //이름에 따라 가져오는 부분
         public Sprite _sprite;
     }
 
@@ -65,11 +73,21 @@ public class StartSceneManager : MonoBehaviour
         GameStartButton = GameObject.Find("GameStartButton").GetComponent<Button>();
 
         BackButton = GameObject.Find("BackButton").GetComponent<Button>();
-
+        
+        TurretTypeButtons = new List<Button>();
+        _turretinfos = new List<Turretinfo>();
+        Turretinfo _Tempturretinfo;
+        for (int i = 0; i < GameObject.Find("TypesContent").transform.childCount; ++i)
+        {
+            TurretTypeButtons.Add(GameObject.Find("TypesContent").transform.GetChild(i).GetComponent<Button>());
+            
+            //_turretinfos.Add();
+        }
         
         TurretPosButtons = new List<Button>();
         TurretToButtonLines = new List<LineRenderer>();
-        //ShipObject.transform.GetChild(0).GetChild(0).GetChild(i).position
+
+        
         for (int i = 0; i <GameObject.Find("SelectPositionButtons").transform.childCount; i++)
         {
             int num = i;
@@ -102,8 +120,8 @@ public class StartSceneManager : MonoBehaviour
         ShipModelAnimator = ShipObject.GetComponent<Animator>();
         
         
-        _turretinfos = new List<Turretinfo>();
-        
+       
+
         if (StartButton != null)
         {
             StartButton.onClick.AddListener(delegate { StartButtonOnClick(); });
@@ -120,7 +138,6 @@ public class StartSceneManager : MonoBehaviour
 
     private void TurretPosButtonOnClick(int num)
     {
-        
         print(num);
     }
 
