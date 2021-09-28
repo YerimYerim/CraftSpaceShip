@@ -56,12 +56,15 @@ public class StartSceneManager : MonoBehaviour
         public int _speed;
         public int _damage;
         //이름에 따라 가져오는 부분
-        public Image _sprite ;
+        public Sprite _sprite;
     }
 
     [SerializeField] private List<Turretinfo> _turretinfos;
     [SerializeField] private List<AttackPattern> _playerTurretAttackPatterns;
+    [Header("int")] 
+    private int LevelperDamage = 1;
 
+    private int LevelperSpeed = 10;
     void Awake()
     {
         StartPannel = GameObject.Find("StartPanel");
@@ -80,20 +83,40 @@ public class StartSceneManager : MonoBehaviour
 
         TurretTypeButtons = new List<Button>();
         _turretinfos = new List<Turretinfo>();
+        
+        XMLReader.LoadXML(Application.dataPath + "/DATA.xml", out _turretinfos);
+        //터렛 정보 저장
+        for (int i = 0; i < _turretinfos.Count; ++i)
+        {
+            var turretinfo = _turretinfos[i];
+            print(turretinfo._sprite == null);
+            turretinfo._sprite = TurretSpriteImage[i];
 
+            if (PlayerPrefs.HasKey(i + "TurretLevel"))
+            {
+                turretinfo._level = 1;
+                PlayerPrefs.SetInt(i + "TurretLevel"  , turretinfo._level);
+            }
+            else
+            {
+                turretinfo._level = PlayerPrefs.GetInt(i + "TurretLevel");
+            }
+
+            turretinfo._damage = (int) (turretinfo._attackPattern + 1) * turretinfo._level * LevelperDamage;
+            turretinfo._speed = turretinfo._level * LevelperSpeed / ((int) (turretinfo._attackPattern) +1);
+
+
+            print(turretinfo._level + turretinfo._damage + turretinfo._speed);
+            _turretinfos[i] = turretinfo;
+        }
+        
         for (int i = 0; i < GameObject.Find("TypesContent").transform.childCount; ++i)
         {
             TurretTypeButtons.Add(GameObject.Find("TypesContent").transform.GetChild(i).GetComponent<Button>());
-
-            //_turretinfos.Add();
         }
 
         //getINFO
-        XMLReader.LoadXML(Application.dataPath + "/DATA.xml", out _turretinfos);
-        for (int i = 0; i < _turretinfos.Count; ++i)
-        {
-            _turretinfos[i]._sprite.sprite = TurretSpriteImage[i];
-        }
+
 
         TurretPosButtons = new List<Button>();
         TurretToButtonLines = new List<LineRenderer>();
