@@ -44,6 +44,8 @@ public class StartSceneManager : MonoBehaviour
 
     [Header("spriteIMAGE")]
     [SerializeField] private List<Sprite> TurretSpriteImage;
+
+
     public struct Turretinfo
     {
         //xml 로부터 읽어오는 db
@@ -61,10 +63,15 @@ public class StartSceneManager : MonoBehaviour
 
     [SerializeField] private List<Turretinfo> _turretinfos;
     [SerializeField] private List<AttackPattern> _playerTurretAttackPatterns;
-    [Header("int")] 
-    private int LevelperDamage = 1;
-
-    private int LevelperSpeed = 10;
+    
+    
+    [Header("LevelPerStaticNum")] 
+    private static int LevelperDamage = 1;
+    private static int LevelperSpeed = 10;
+    
+    
+    [Header("selected Buttons info")] [SerializeField]
+    private int SelectedTurretType = 0;
     void Awake()
     {
         StartPannel = GameObject.Find("StartPanel");
@@ -190,7 +197,8 @@ public class StartSceneManager : MonoBehaviour
     }
     private void TurretPosButtonOnClick(int num)
     {
-        print(num);
+        // num 에 터렛 바꿔주면 됨
+        TurretPosButtons[num].transform.GetChild(0).GetComponent<Image>().sprite = _turretinfos[SelectedTurretType]._sprite;
     }
 
     private void StartButtonOnClick()
@@ -247,5 +255,7 @@ public class StartSceneManager : MonoBehaviour
         
         TurretLevelText.text = _turretinfos[num]._level.ToString();
         HaveToPayGoldText.text = (_turretinfos[num]._level * 100).ToString();
+
+        SelectedTurretType = num;
     }
 }
