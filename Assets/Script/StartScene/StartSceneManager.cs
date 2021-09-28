@@ -80,6 +80,8 @@ public class StartSceneManager : MonoBehaviour
     
     [Header("Store")] 
     [SerializeField] private GameObject StorePopup;
+
+    [SerializeField] private Button BuyGoldButton;
     void Awake()
     {
         StartPannel = GameObject.Find("StartPanel");
@@ -98,7 +100,8 @@ public class StartSceneManager : MonoBehaviour
         GameStartButton = GameObject.Find("GameStartButton").GetComponent<Button>();
 
         BackButton = GameObject.Find("BackButton").GetComponent<Button>();
-
+        BuyGoldButton = GameObject.Find("GoldBuyButton").GetComponent<Button>();
+        BuyGoldButton.onClick.AddListener(delegate { BuyGoldButtonOnClick(); });
         TurretTypeButtons = new List<Button>();
         _turretinfos = new List<Turretinfo>();
         
@@ -190,6 +193,9 @@ public class StartSceneManager : MonoBehaviour
         GoldCountText = GameObject.Find("GoldCountText").GetComponent<Text>();
         UpgradeErrorPopup = GameObject.Find("UpgradeErrorPopup");
         UpgradeErrorPopup.SetActive(false);
+
+        StorePopup = GameObject.Find("StorePopup");
+        StorePopup.SetActive(false);
         
         if (PlayerPrefs.HasKey("GoldCount"))
         {
@@ -341,11 +347,19 @@ public class StartSceneManager : MonoBehaviour
             SaveTurretInfoLevel(turretinfo._level, turretinfo);
             turretinfo._speed = SetTurretSpeed(turretinfo);
             turretinfo._damage = SetTurretDamage(turretinfo);
+            
             _turretinfos[SelectedTurretType]  = turretinfo;
         }
         else
         {
             UpgradeErrorPopup.SetActive(true);
         }
+    }
+
+    private void BuyGoldButtonOnClick()
+    {
+        GoldCount += 100;
+        PlayerPrefs.SetInt("GoldCount", GoldCount);
+        GoldCountText.text = GoldCount.ToString();
     }
 }
