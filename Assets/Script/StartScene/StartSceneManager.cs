@@ -92,7 +92,7 @@ public class StartSceneManager : MonoBehaviour
             print(turretinfo._sprite == null);
             turretinfo._sprite = TurretSpriteImage[i];
 
-            if (PlayerPrefs.HasKey(i + "TurretLevel"))
+            if (PlayerPrefs.HasKey(i + "TurretLevel") == false)
             {
                 turretinfo._level = 1;
                 PlayerPrefs.SetInt(i + "TurretLevel"  , turretinfo._level);
@@ -102,17 +102,19 @@ public class StartSceneManager : MonoBehaviour
                 turretinfo._level = PlayerPrefs.GetInt(i + "TurretLevel");
             }
 
-            turretinfo._damage = (int) (turretinfo._attackPattern + 1) * turretinfo._level * LevelperDamage;
-            turretinfo._speed = turretinfo._level * LevelperSpeed / ((int) (turretinfo._attackPattern) +1);
+            turretinfo._damage = SetTurretDamage(turretinfo);
+            turretinfo._speed = SetTurretSpeed(turretinfo);
 
 
-            print(turretinfo._level + turretinfo._damage + turretinfo._speed);
+           //print("level" + turretinfo._level  + " damge "+ turretinfo._damage +"speed"+ turretinfo._speed);
             _turretinfos[i] = turretinfo;
         }
         
         for (int i = 0; i < GameObject.Find("TypesContent").transform.childCount; ++i)
         {
             TurretTypeButtons.Add(GameObject.Find("TypesContent").transform.GetChild(i).GetComponent<Button>());
+            int temp = i;
+            TurretTypeButtons[i].onClick.AddListener(delegate { TurretTypeButtonsOnClick(temp); });
         }
 
         //getINFO
@@ -170,6 +172,22 @@ public class StartSceneManager : MonoBehaviour
         ShipModelAnimator.SetBool("isRotateLeft", true);
     }
 
+    private int SetTurretDamage(Turretinfo turretinfo)
+    {
+        return (int) (turretinfo._attackPattern + 1) * turretinfo._level * LevelperDamage;
+    }
+    private int SetTurretDamage(Turretinfo turretinfo, int Level)
+    {
+        return (int) (turretinfo._attackPattern + 1) * Level * LevelperDamage;
+    }
+    private int SetTurretSpeed(Turretinfo turretinfo)
+    {
+        return turretinfo._level * LevelperSpeed / ((int) (turretinfo._attackPattern) +1);
+    }
+    private int SetTurretSpeed(Turretinfo turretinfo, int Level)
+    {
+        return Level * LevelperSpeed / ((int) (turretinfo._attackPattern) +1);
+    }
     private void TurretPosButtonOnClick(int num)
     {
         print(num);
@@ -213,4 +231,16 @@ public class StartSceneManager : MonoBehaviour
         }
     }
 
+    private void TurretTypeButtonsOnClick(int num)
+    {
+
+        TurretNameText.text = _turretinfos[num]._name;
+        TurretInfoText.text = _turretinfos[num]._info;
+        TurretDamegeBeforeText.text = _turretinfos[num]._damage.ToString();
+        TurretDamegeAfterText.text = SetTurretDamage(_turretinfos[num], _turretinfos[num]._level + 1).ToString();
+        TurretShootBeforeSpeedText.text = SetTurretSpeed(_turretinfos[num]).ToString();
+        TurretShootAfterSpeedText.text = SetTurretSpeed(_turretinfos[num], _turretinfos[num]._level + 1).ToString();
+        TurretLevelText.text = _turretinfos[num]._level.ToString();
+        HaveToPayGoldText.text = (_turretinfos[num]._level * 100).ToString();
+    }
 }
