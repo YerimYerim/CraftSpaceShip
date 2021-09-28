@@ -62,16 +62,24 @@ public class StartSceneManager : MonoBehaviour
     }
 
     [SerializeField] private List<Turretinfo> _turretinfos;
-    [SerializeField] private List<AttackPattern> _playerTurretAttackPatterns;
-    
     
     [Header("LevelPerStaticNum")] 
     private static int LevelperDamage = 1;
     private static int LevelperSpeed = 10;
+    private static int LevelPerNeedGold = 100;
     
     
-    [Header("selected Buttons info")] [SerializeField]
-    private int SelectedTurretType = 0;
+    [Header("selected Buttons info")] 
+    [SerializeField]private int SelectedTurretType = 0;
+    [SerializeField]private List<int> turretPosTypes;
+
+    [Header("Gold")] 
+    [SerializeField] private int GoldCount;
+    [SerializeField] private Text GoldCountText;
+    [SerializeField] private GameObject UpgradeErrorPopup;
+    
+    [Header("Store")] 
+    [SerializeField] private GameObject StorePopup;
     void Awake()
     {
         StartPannel = GameObject.Find("StartPanel");
@@ -83,7 +91,10 @@ public class StartSceneManager : MonoBehaviour
         StoreButton = GameObject.Find("StoreButton").GetComponent<Button>();
         SettingButton = GameObject.Find("Settingbutton").GetComponent<Button>();
         OpenInfoButton = GameObject.Find("InfoButton").GetComponent<Button>();
+        
         UpgradeButton = GameObject.Find("UpgradeButton").GetComponent<Button>();
+        UpgradeButton.onClick.AddListener(delegate { UpGradeButtonsOnClick(); });
+
         GameStartButton = GameObject.Find("GameStartButton").GetComponent<Button>();
 
         BackButton = GameObject.Find("BackButton").GetComponent<Button>();
@@ -102,7 +113,7 @@ public class StartSceneManager : MonoBehaviour
             if (PlayerPrefs.HasKey(i + "TurretLevel") == false)
             {
                 turretinfo._level = 1;
-                PlayerPrefs.SetInt(i + "TurretLevel"  , turretinfo._level);
+                SaveTurretInfoLevel(i, turretinfo);
             }
             else
             {
@@ -148,23 +159,53 @@ public class StartSceneManager : MonoBehaviour
             TurretToButtonLines[i].SetPosition(1 , GameObject.Find("TurretsPosition").transform.GetChild(i).transform.position);
         }    
         
+        turretPosTypes = new List<int>();
+        for (int i = 0; i < TurretPosButtons.Count; ++i)
+        {
+            if (PlayerPrefs.HasKey("TurretPos" + i))
+            {
+                turretPosTypes.Add(PlayerPrefs.GetInt("TurretPos" + i ));
+                SetTurretPosSprite(i);
+            }
+            else
+            {
+                turretPosTypes.Add(0);
+                saveTurretPosType(i);
+                SetTurretPosSprite(i);
+            }
+
+  
+        }
+        
         HaveToPayGoldText = GameObject.Find("HaveToPayGoldText").GetComponent<Text>();
         TurretNameText = GameObject.Find("TurretNameText").GetComponent<Text>();
         TurretInfoText = GameObject.Find("TurretInfoText").GetComponent<Text>();
         TurretDamegeBeforeText = GameObject.Find("TurretDamegeBeforeText").GetComponent<Text>();
         TurretDamegeAfterText = GameObject.Find("TurretDamegeAfterText").GetComponent<Text>();
         TurretShootBeforeSpeedText = GameObject.Find("TurretShootBeforeSpeedText").GetComponent<Text>();
-        TurretShootAfterSpeedText = GameObject.Find("TurretShootAfterSpeedText").GetComponent<Text>();    
+        TurretShootAfterSpeedText = GameObject.Find("TurretShootAfterSpeedText").GetComponent<Text>();
         TurretLevelText = GameObject.Find("NowSelectTurretLevelText").GetComponent<Text>();
+            
+            
+        GoldCountText = GameObject.Find("GoldCountText").GetComponent<Text>();
+        UpgradeErrorPopup = GameObject.Find("UpgradeErrorPopup");
+        UpgradeErrorPopup.SetActive(false);
+        
+        if (PlayerPrefs.HasKey("GoldCount"))
+        {
+            GoldCount = PlayerPrefs.GetInt("GoldCount");
+            GoldCountText.text = GoldCount.ToString();
+        }
+        else
+        {
+            GoldCountText.text = 0.ToString();
+        }
         
         
         CraftZoneAnimator = CraftZonePannel.GetComponent<Animator>();
         StartSceneAnimator = StartPannel.GetComponent<Animator>();
         ShipModelAnimator = ShipObject.GetComponent<Animator>();
         
-        
-       
-
         if (StartButton != null)
         {
             StartButton.onClick.AddListener(delegate { StartButtonOnClick(); });
@@ -177,6 +218,22 @@ public class StartSceneManager : MonoBehaviour
         CraftZonePannel.SetActive(false);
         ShipModelAnimator.SetBool("isRotateRight" , false);
         ShipModelAnimator.SetBool("isRotateLeft", true);
+    }
+
+    private void SaveTurretInfoLevel(int level, Turretinfo turretinfo)
+    {
+        PlayerPrefs.SetInt(level + "TurretLevel", turretinfo._level);
+    }
+
+    private void SetTurretPosSprite(int TypeNum)
+    {
+        TurretPosButtons[TypeNum].transform.GetChild(0).GetComponent<Image>().sprite =
+            _turretinfos[turretPosTypes[TypeNum]]._sprite;
+    }
+
+    private void saveTurretPosType(int i)
+    {
+        PlayerPrefs.SetInt("TurretPos" + i, turretPosTypes[i]);
     }
 
     private int SetTurretDamage(Turretinfo turretinfo)
@@ -199,6 +256,8 @@ public class StartSceneManager : MonoBehaviour
     {
         // num 에 터렛 바꿔주면 됨
         TurretPosButtons[num].transform.GetChild(0).GetComponent<Image>().sprite = _turretinfos[SelectedTurretType]._sprite;
+        turretPosTypes[num] = SelectedTurretType;
+        PlayerPrefs.SetInt("TurretPos" + num , SelectedTurretType );
     }
 
     private void StartButtonOnClick()
@@ -254,8 +313,39 @@ public class StartSceneManager : MonoBehaviour
         TurretShootAfterSpeedText.color = Color.blue;
         
         TurretLevelText.text = _turretinfos[num]._level.ToString();
-        HaveToPayGoldText.text = (_turretinfos[num]._level * 100).ToString();
+        if (GetLevelPerNeedGold(num) < GoldCount)
+        {
+            HaveToPayGoldText.color = Color.red;
+        }
+        else
+        {
+            HaveToPayGoldText.color = Color.black;
+        }
+        HaveToPayGoldText.text = GetLevelPerNeedGold(num).ToString();
 
         SelectedTurretType = num;
+       
+    }
+
+    private int GetLevelPerNeedGold(int num)
+    {
+        return (_turretinfos[num]._level * LevelPerNeedGold);
+    }
+
+    private void UpGradeButtonsOnClick()
+    {
+        if (GoldCount >= GetLevelPerNeedGold(SelectedTurretType))
+        {
+            var turretinfo = _turretinfos[SelectedTurretType];
+            turretinfo._level += 1;
+            SaveTurretInfoLevel(turretinfo._level, turretinfo);
+            turretinfo._speed = SetTurretSpeed(turretinfo);
+            turretinfo._damage = SetTurretDamage(turretinfo);
+            _turretinfos[SelectedTurretType]  = turretinfo;
+        }
+        else
+        {
+            UpgradeErrorPopup.SetActive(true);
+        }
     }
 }
