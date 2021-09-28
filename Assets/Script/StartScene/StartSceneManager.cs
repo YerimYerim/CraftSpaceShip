@@ -42,22 +42,26 @@ public class StartSceneManager : MonoBehaviour
     [Header("LineRenderer")]
     [SerializeField] private List<LineRenderer> TurretToButtonLines;
 
-    private struct Turretinfo
+    [Header("spriteIMAGE")]
+    [SerializeField] private List<Sprite> TurretSpriteImage;
+    public struct Turretinfo
     {
         //xml 로부터 읽어오는 db
         public AttackPattern _attackPattern;
-        public string _info;
         public string _name;
+        public string _info;
+
         //유저가 가지고있는 정보
         public int _level;
         public int _speed;
         public int _damage;
         //이름에 따라 가져오는 부분
-        public Sprite _sprite;
+        public Image _sprite ;
     }
 
     [SerializeField] private List<Turretinfo> _turretinfos;
     [SerializeField] private List<AttackPattern> _playerTurretAttackPatterns;
+
     void Awake()
     {
         StartPannel = GameObject.Find("StartPanel");
@@ -73,17 +77,24 @@ public class StartSceneManager : MonoBehaviour
         GameStartButton = GameObject.Find("GameStartButton").GetComponent<Button>();
 
         BackButton = GameObject.Find("BackButton").GetComponent<Button>();
-        
+
         TurretTypeButtons = new List<Button>();
         _turretinfos = new List<Turretinfo>();
-        Turretinfo _Tempturretinfo;
+
         for (int i = 0; i < GameObject.Find("TypesContent").transform.childCount; ++i)
         {
             TurretTypeButtons.Add(GameObject.Find("TypesContent").transform.GetChild(i).GetComponent<Button>());
-            
+
             //_turretinfos.Add();
         }
-        
+
+        //getINFO
+        XMLReader.LoadXML(Application.dataPath + "/DATA.xml", out _turretinfos);
+        for (int i = 0; i < _turretinfos.Count; ++i)
+        {
+            _turretinfos[i]._sprite.sprite = TurretSpriteImage[i];
+        }
+
         TurretPosButtons = new List<Button>();
         TurretToButtonLines = new List<LineRenderer>();
 
@@ -178,5 +189,5 @@ public class StartSceneManager : MonoBehaviour
             TurretToButtonLines[i].endWidth = 0;
         }
     }
-    
+
 }

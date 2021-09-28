@@ -1,0 +1,5 @@
+<root>
+    <Turret _attackPattern="ONE" _name="머신건포탑" _info="한 방향으로 빠르게 발사하여 약한 데미지를 준다"/>
+    <Turret _attackPattern="THREE" _name="샷건포탑" _info="세갈래 방향으로 준수한 속도로 발사하여 준수한 데미지를 준다"/>
+    <Turret _attackPattern="EIGHT" _name="다방향포탑" _info="여러 방향으로 느리게 발사하여 큰 데미지를 준다."/>
+</root>

@@ -28,6 +28,7 @@
             </e>
           </e>
         </e>
+        <e p="DATA.xml" t="Include" />
         <e p="Script" t="Include">
           <e p="BulletPattern" t="Include">
             <e p="Bullets.cs" t="Include" />
@@ -56,6 +57,9 @@
             <e p="PlayerStatus.cs" t="Include" />
             <e p="ScoreManager.cs" t="Include" />
             <e p="WaveManager.cs" t="Include" />
+          </e>
+          <e p="ReadData" t="Include">
+            <e p="XMLReader.cs" t="Include" />
           </e>
           <e p="StartScene" t="Include">
             <e p="StartSceneManager.cs" t="Include" />

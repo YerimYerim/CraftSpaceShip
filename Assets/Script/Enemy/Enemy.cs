@@ -16,7 +16,7 @@ public enum AttackPattern
 {
     ONE,
     THREE,
-    EIGHT
+    EIGHT,
 }
 
 [Serializable]
