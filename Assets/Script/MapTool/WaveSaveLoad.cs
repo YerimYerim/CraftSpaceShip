@@ -119,8 +119,8 @@ public static class WaveSaveLoad
                        tempEnemy._path.AddRange(pathFormats[pathIndex]._path.ToList());
                    }
                }
-
            }
+           
            waves[enemyFormats[enemyIndex]._parentWaveNum].Enemys.Add(tempEnemy);
        }
        return waves;

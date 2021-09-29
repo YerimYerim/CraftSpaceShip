@@ -217,7 +217,7 @@ public class MapToolWaveManager : MonoBehaviour
         {
             Waves[nowWaveNum].Enemys[nowEnemyNum]._path[nowSelectVector] =
                 new Vector3(float.Parse(xInput.text), -0.8f, float.Parse(yInput.text));
-            print("enter");
+
             drawPointandLine(nowSelectVector, Waves[nowWaveNum].Enemys[nowEnemyNum]._path[nowSelectVector]);
             Destroy(PointParent.GetChild(nowSelectVector).gameObject);
         }
@@ -395,7 +395,7 @@ public class MapToolWaveManager : MonoBehaviour
                 setEnemy();
                 for (int pathNum = 0; pathNum < waves[waveNum].Enemys[enemyNum]._path.Count; ++pathNum)
                 {
-                    print("wave " + waveNum + "Enemy " + enemyNum + "path" + pathNum + "vector" + waves[waveNum].Enemys[enemyNum]._path[pathNum]);
+                   // print("wave " + waveNum + "Enemy " + enemyNum + "path" + pathNum + "vector" + waves[waveNum].Enemys[enemyNum]._path[pathNum]);
                     tempVector3.x = waves[waveNum].Enemys[enemyNum]._path[pathNum].x;
                     tempVector3.y = -0.8f;
                     tempVector3.z = waves[waveNum].Enemys[enemyNum]._path[pathNum].z;
