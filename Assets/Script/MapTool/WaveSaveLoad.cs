@@ -95,49 +95,59 @@ public static class WaveSaveLoad
         List<MapToolWaveManager.Wave> LoadWave = new List<MapToolWaveManager.Wave>();
         MapToolWaveManager.Wave tempWave = new MapToolWaveManager.Wave();
         Enemy tempEnemy = new Enemy();
-        for (int i = 0; i < enemyFormats.Count; ++i)
+        for (int EnemyNum = 0; EnemyNum < enemyFormats.Count; ++EnemyNum)
         {
             bool isHasParentWave = false;
-            for (int num = 0; num < LoadWave.Count; ++num)
+            for (int WaveNum = 0; WaveNum < LoadWave.Count; ++WaveNum)
             {
-                if (LoadWave[num].waveNum == enemyFormats[i]._parentWaveNum)
+                if (LoadWave[WaveNum].waveNum == enemyFormats[EnemyNum]._parentWaveNum)
                 {
                     //만약 내 부모가 있다면 여기서 enemy 를 만들어서 add 만 해주고 return
                     isHasParentWave = true;
-                    tempEnemy.HP = enemyFormats[i]._HP;
-                    tempEnemy._enemyType = (EnemyType) enemyFormats[i]._enemyType;
-                    tempEnemy._attackPattern = (AttackPattern) enemyFormats[i]._attackPattern;
-                    tempEnemy._moveSpeed = enemyFormats[i]._moveSpeed;
-                    tempEnemy._rotateSpeed = enemyFormats[i]._rotateSpeed;
-                    tempEnemy._bulletShootSpeed = enemyFormats[i]._bulletShootSpeed;
-                    tempEnemy._bulletMoveSpeed = enemyFormats[i]._bulletMoveSpeed;
-                    
+                    tempEnemy.HP = enemyFormats[EnemyNum]._HP;
+                    tempEnemy._enemyType = (EnemyType) enemyFormats[EnemyNum]._enemyType;
+                    tempEnemy._attackPattern = (AttackPattern) enemyFormats[EnemyNum]._attackPattern;
+                    tempEnemy._moveSpeed = enemyFormats[EnemyNum]._moveSpeed;
+                    tempEnemy._rotateSpeed = enemyFormats[EnemyNum]._rotateSpeed;
+                    tempEnemy._bulletShootSpeed = enemyFormats[EnemyNum]._bulletShootSpeed;
+                    tempEnemy._bulletMoveSpeed = enemyFormats[EnemyNum]._bulletMoveSpeed;
+
                     for (int t = 0; t < pathFormats.Count; ++t)
                     {
-                        if (pathFormats[t]._parentWaveNum == num)
+
+                        if (pathFormats[t]._parentWaveNum == WaveNum)
                         {
-                            if (pathFormats[t]._parentEnemyNum == i)
+                            if (pathFormats[t]._parentEnemyNum == EnemyNum)
                             {
                                 tempEnemy._path = new List<Vector3>();
                                 tempEnemy._path.AddRange(pathFormats[t]._path.ToList());
                             }
                         }
                     }
-                    LoadWave[num].Enemys.Add(tempEnemy);
+                    LoadWave[WaveNum].Enemys.Add(tempEnemy);
                 }
             }
             if(LoadWave.Count == 0 || isHasParentWave == false)
             {
-                tempWave.waveNum = enemyFormats[i]._parentWaveNum;
+                tempWave.waveNum = enemyFormats[EnemyNum]._parentWaveNum;
                 tempWave.Enemys = new List<Enemy>();
                     
-                tempEnemy.HP = enemyFormats[i]._HP;
-                tempEnemy._enemyType = (EnemyType) enemyFormats[i]._enemyType;
-                tempEnemy._attackPattern = (AttackPattern) enemyFormats[i]._attackPattern;
-                tempEnemy._moveSpeed = enemyFormats[i]._moveSpeed;
-                tempEnemy._rotateSpeed = enemyFormats[i]._rotateSpeed;
-                tempEnemy._bulletShootSpeed = enemyFormats[i]._bulletShootSpeed;
-                tempEnemy._bulletMoveSpeed = enemyFormats[i]._bulletMoveSpeed;
+                tempEnemy.HP = enemyFormats[EnemyNum]._HP;
+                tempEnemy._enemyType = (EnemyType) enemyFormats[EnemyNum]._enemyType;
+                tempEnemy._attackPattern = (AttackPattern) enemyFormats[EnemyNum]._attackPattern;
+                tempEnemy._moveSpeed = enemyFormats[EnemyNum]._moveSpeed;
+                tempEnemy._rotateSpeed = enemyFormats[EnemyNum]._rotateSpeed;
+                tempEnemy._bulletShootSpeed = enemyFormats[EnemyNum]._bulletShootSpeed;
+                tempEnemy._bulletMoveSpeed = enemyFormats[EnemyNum]._bulletMoveSpeed;
+                for (int t = 0; t < pathFormats.Count; ++t)
+                {
+                    if (pathFormats[t]._parentEnemyNum == EnemyNum)
+                    {
+                        tempEnemy._path = new List<Vector3>();
+                        tempEnemy._path.AddRange(pathFormats[t]._path.ToList());
+                    }
+                    
+                }
                 tempWave.Enemys.Add(tempEnemy);
                 LoadWave.Add(tempWave);
             }
@@ -221,7 +231,7 @@ public static class WaveSaveLoad
     //     
     // }
 
-    public static void Load()
+    public static List<MapToolWaveManager.Wave> Load()
     {
         string ToJsonDataWAVE  = ""; 
         string ToJsonDataENEMY  = ""; 
@@ -243,13 +253,8 @@ public static class WaveSaveLoad
         
         List<MapToolWaveManager.Wave> newWave = new List<MapToolWaveManager.Wave>();
         newWave.AddRange(LoadEnemy(enemyFormats,pathFormats));
-        Debug.Log(newWave.Count + "개의 웨이브 존재");
-        for (int i = 0; i < newWave.Count; ++i)
-        {
 
-        }
-        
-        
+        return newWave;
     }
 }
 

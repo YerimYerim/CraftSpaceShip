@@ -297,7 +297,7 @@ public class MapToolWaveManager : MonoBehaviour
         WaveButton.Add(TempWavePrefab);
 
         nowEnemyNum = 0;
-        print("Ss");
+        print(nowWaveNum);
         nowWaveNum = nowMaxWaveNum;
         ++nowMaxWaveNum;
     }
@@ -333,7 +333,6 @@ public class MapToolWaveManager : MonoBehaviour
             enemyListObject.Clear();
             Destroy(enemyListParent.GetChild(i).gameObject);
         }
-        print(Waves[nowWaveNum].Enemys.Count);
 
         for (int i = 0; i < Waves[nowWaveNum].Enemys.Count; ++i)
         {
@@ -374,6 +373,30 @@ public class MapToolWaveManager : MonoBehaviour
 
     void Load()
     {
-        WaveSaveLoad.Load();
+        List<Wave> waves = new List<Wave>(WaveSaveLoad.Load());
+
+        for (int waveNum = 0; waveNum < waves.Count; ++waveNum)
+        {
+            OnClickAddWaveButton();
+            // for (int enemyNum = 0; enemyNum < waves[waveNum].Enemys.Count; ++enemyNum)
+            // {
+            //     OnClickEnemyAddButton();
+            //     for (int pathNum = 0; pathNum < waves[waveNum].Enemys[enemyNum]._path.Count; ++pathNum)
+            //     {
+            //         print("path NUM"+pathNum);
+            //         if (nowEnemyNum != -1)
+            //         {
+            //             tempVector3.x = Waves[waveNum].Enemys[enemyNum]._path[pathNum].x;
+            //             tempVector3.y = -0.8f;
+            //             tempVector3.z = Waves[waveNum].Enemys[enemyNum]._path[pathNum].z;
+            //             
+            //             Waves[waveNum].Enemys[enemyNum]._path.Add(new Vector3(tempVector3.x, -0.8f, tempVector3.z));
+            //             drawPointandLine(pathNum , tempVector3);
+            //         }
+            //     }
+            //     
+            // }
+        }
     }
 }
+    
