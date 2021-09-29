@@ -43,7 +43,8 @@ public class PlayerTurret : MonoBehaviour
         }
         for (int i = 0; i < TurretsCount; ++i)
         {
-            TurretsBullets[i].init();    
+            TurretsBullets[i].init();
+            print(AttackPatterns == null);
             AttackPatterns[i] = (AttackPattern)PlayerStatus.turretPosTypes[i];
             TurretsLevel[i] = PlayerStatus._turretinfos[(int)AttackPatterns[i]]._level;
             Speed[i] = PlayerStatus._turretinfos[(int)AttackPatterns[i]]._speed;

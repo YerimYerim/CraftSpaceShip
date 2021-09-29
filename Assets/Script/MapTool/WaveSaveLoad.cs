@@ -211,41 +211,25 @@ public static class WaveSaveLoad
         string ToJsonDataENEMY  = ""; 
         string ToJsonDataPATH  = ""; 
         
-        string filePathENEMY = Application.streamingAssetsPath+ "ENEMY" + FilePath;
-        string filePathPATH = Application.streamingAssetsPath + "PATH" + FilePath;
-        string filePathWAVE = Application.streamingAssetsPath+"WAVE" + FilePath;
-        
-        
-        string EnemyText = File.ReadAllText(filePathENEMY);
+        string filePathENEMY = Application.streamingAssetsPath + "/StreamingAssetsENEMYWave.json";
+        TextAsset textDataEnemy = Resources.Load ("StreamingAssetsENEMYWave") as TextAsset;
+        string filePathPATH = Application.streamingAssetsPath + "/StreamingAssetsPATHWave.json";
+        TextAsset textDatapath = Resources.Load ("StreamingAssetsPATHWave") as TextAsset;
+        string filePathWAVE = Application.streamingAssetsPath + "/StreamingAssetsWAVEWave.json";
+        TextAsset textDatawave = Resources.Load ("StreamingAssetsWAVEWave") as TextAsset;
+
+        string EnemyText = textDataEnemy.ToString();// = File.ReadAllText(filePathENEMY);
         List<EnemyFormat> enemyFormats = JsonUtility.FromJson<Serialization<EnemyFormat>>(EnemyText).ToList();
-        
-        string PathText = File.ReadAllText(filePathPATH);
+
+        string PathText = textDatapath.ToString();  //File.ReadAllText(filePathPATH);
+
         List<PathFormat> pathFormats = JsonUtility.FromJson<Serialization<PathFormat>>(PathText).ToList();
 
-        string WaveText = File.ReadAllText(filePathWAVE);
+        string WaveText = textDatawave.ToString();
         List<WaveFormat> waveFormats = JsonUtility.FromJson<Serialization<WaveFormat>>(WaveText).ToList();
         
-        
         List<MapToolWaveManager.Wave> newWave = new List<MapToolWaveManager.Wave>();
-       newWave.AddRange(LoadEnemy(waveFormats ,enemyFormats,pathFormats));
-
-        #region Editor
-
-        for (int i = 0; i < newWave.Count; ++i)
-        {
-            for (int j = 0; j < newWave[i].Enemys.Count; ++j)
-            {
-                Debug.Log("SAVE :wave " +i + "enemy"+ j +"pattern" + newWave[i].Enemys[j]._attackPattern);
-                for (int t = 0; t < newWave[i].Enemys[j]._path.Count; ++t)
-                {
-                    Debug.Log("SAVE :wave " +i + "enemy"+ j + "Path" + t + "vector"+newWave[i].Enemys[j]._path[t]);
-                }
-            }
-        }
-        
-
-        #endregion
-        
+        newWave.AddRange(LoadEnemy(waveFormats ,enemyFormats,pathFormats));
         
         return newWave;
     }

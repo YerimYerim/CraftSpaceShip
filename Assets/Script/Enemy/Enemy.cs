@@ -168,19 +168,14 @@ public class Enemy : MonoBehaviour
             {
                 DeadEffect.transform.position = transform.position;
                 DeadEffect.SetActive(true);
+                
                 gameObject.SetActive(false);
+                
                 PlayerStatus.AddScore(_enemyType);
                 PlayerStatus.AddCombo();
-                
             }
-            print("호에엥" + bullet.name);
             _animator.SetBool("isHit", true);
 
         }
-    }
-
-    void SaveEnemy()
-    {
-        
     }
 }

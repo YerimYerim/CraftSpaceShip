@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class StartSceneManager : MonoBehaviour
@@ -84,14 +85,13 @@ public class StartSceneManager : MonoBehaviour
         UpgradeButton.onClick.AddListener(delegate { UpGradeButtonsOnClick(); });
 
         GameStartButton = GameObject.Find("GameStartButton").GetComponent<Button>();
-
+        GameStartButton.onClick.AddListener(delegate { StartGameButtonOnClick(); });
         BackButton = GameObject.Find("BackButton").GetComponent<Button>();
         BuyGoldButton = GameObject.Find("GoldBuyButton").GetComponent<Button>();
         BuyGoldButton.onClick.AddListener(delegate { BuyGoldButtonOnClick(); });
         TurretTypeButtons = new List<Button>();
-        PlayerStatus._turretinfos = new List<Turretinfo>();
         
-        XMLReader.LoadXMLTurretTable(Application.dataPath + "/DATA.xml", out PlayerStatus._turretinfos);
+        XMLReader.LoadXMLTurretTable("/DATA.xml", out PlayerStatus._turretinfos);
         //터렛 정보 가져오기
         for (int i = 0; i < PlayerStatus._turretinfos.Count; ++i)
         {
@@ -156,7 +156,7 @@ public class StartSceneManager : MonoBehaviour
             TurretToButtonLines[i].SetPosition(1 , GameObject.Find("TurretsPosition").transform.GetChild(i).transform.position);
         }    
         
-        PlayerStatus.turretPosTypes = new List<int>();
+
         for (int i = 0; i < TurretPosButtons.Count; ++i)
         {
             if (PlayerPrefs.HasKey("TurretPos" + i))
@@ -218,6 +218,12 @@ public class StartSceneManager : MonoBehaviour
         CraftZonePannel.SetActive(false);
         ShipModelAnimator.SetBool("isRotateRight" , false);
         ShipModelAnimator.SetBool("isRotateLeft", true);
+    }
+
+    private void StartGameButtonOnClick()
+    {
+        SceneManager.LoadScene("CraftSpaceShip");
+        
     }
 
     private void SaveTurretInfoLevel(int level, Turretinfo turretinfo)

@@ -19,7 +19,6 @@ public struct Turretinfo
 }
 public class PlayerStatus : MonoBehaviour
 {
-    public static PlayerStatus instance;
     
     public static int _HP = 20;
     public static int _ComboCount = 1;
@@ -33,22 +32,20 @@ public class PlayerStatus : MonoBehaviour
     
     private static Text _scoreTextUI;
     private static Text _comboTextUI;
-    public static List<Turretinfo> _turretinfos;
-    public static List<int> turretPosTypes;
+    public static List<Turretinfo> _turretinfos = new List<Turretinfo>();
+    public static List<int> turretPosTypes = new List<int>();
     
     void Awake()
+    {        
+        DontDestroyOnLoad(gameObject);
+    }
+
+    public static void GetScorePannel()
     {
-        if (instance == null)
-        {
-            instance = this;
-        }
         _scoreTextUI = GameObject.Find("ScoreText").GetComponent<Text>();
         _comboTextUI = GameObject.Find("ComboText").GetComponent<Text>();
-
-        ResetCombo();
-        ResetScore();
     }
-    
+
     public static void AddScore(EnemyType type)
     {
         _ScoreCount = _ComboCount * ((int) type + 1);

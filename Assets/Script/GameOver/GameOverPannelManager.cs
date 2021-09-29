@@ -23,6 +23,7 @@ public class GameOverPannelManager : MonoBehaviour
       ExitButton = GameObject.Find("ExitButton").GetComponent<Button>();
       pannelAnimator = GameObject.Find("SocreBoardPannel").GetComponent<Animator>();
       SocreBoardPannel = GameObject.Find("SocreBoardPannel");
+      PlayerStatus.GetScorePannel();
       SocreBoardPannel.SetActive(false);
    }
 
