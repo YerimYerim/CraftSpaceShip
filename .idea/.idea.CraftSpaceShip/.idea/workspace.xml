@@ -20,7 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8a1e00c3-8cb6-4325-8b63-16678579c924" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CraftSpaceShip/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CraftSpaceShip/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/MapTool/WaveSaveLoad.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/MapTool/WaveSaveLoad.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssetsENEMYWave.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssetsENEMYWave.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssetsPATHWave.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssetsPATHWave.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssetsWAVEWave.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssetsWAVEWave.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +81,7 @@
       <workItem from="1632759472397" duration="8349000" />
       <workItem from="1632805140769" duration="13160000" />
       <workItem from="1632842965531" duration="12604000" />
-      <workItem from="1632894960708" duration="20323000" />
+      <workItem from="1632894960708" duration="24469000" />
     </task>
     <servers />
   </component>
