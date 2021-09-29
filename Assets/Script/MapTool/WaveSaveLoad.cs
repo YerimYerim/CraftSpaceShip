@@ -97,12 +97,13 @@ public static class WaveSaveLoad
         Enemy tempEnemy = new Enemy();
         for (int i = 0; i < enemyFormats.Count; ++i)
         {
+            bool isHasParentWave = false;
             for (int num = 0; num < LoadWave.Count; ++num)
             {
                 if (LoadWave[num].waveNum == enemyFormats[i]._parentWaveNum)
                 {
                     //만약 내 부모가 있다면 여기서 enemy 를 만들어서 add 만 해주고 return
-                    
+                    isHasParentWave = true;
                     tempEnemy.HP = enemyFormats[i]._HP;
                     tempEnemy._enemyType = (EnemyType) enemyFormats[i]._enemyType;
                     tempEnemy._attackPattern = (AttackPattern) enemyFormats[i]._attackPattern;
@@ -124,21 +125,21 @@ public static class WaveSaveLoad
                     }
                     LoadWave[num].Enemys.Add(tempEnemy);
                 }
-                else if(num == LoadWave.Count -1)
-                {
-                    tempWave.waveNum = enemyFormats[i]._parentWaveNum;
-                    tempWave.Enemys = new List<Enemy>();
+            }
+            if(LoadWave.Count == 0 || isHasParentWave == false)
+            {
+                tempWave.waveNum = enemyFormats[i]._parentWaveNum;
+                tempWave.Enemys = new List<Enemy>();
                     
-                    tempEnemy.HP = enemyFormats[i]._HP;
-                    tempEnemy._enemyType = (EnemyType) enemyFormats[i]._enemyType;
-                    tempEnemy._attackPattern = (AttackPattern) enemyFormats[i]._attackPattern;
-                    tempEnemy._moveSpeed = enemyFormats[i]._moveSpeed;
-                    tempEnemy._rotateSpeed = enemyFormats[i]._rotateSpeed;
-                    tempEnemy._bulletShootSpeed = enemyFormats[i]._bulletShootSpeed;
-                    tempEnemy._bulletMoveSpeed = enemyFormats[i]._bulletMoveSpeed;
-                    tempWave.Enemys.Add(tempEnemy);
-                    LoadWave.Add(tempWave);
-                }
+                tempEnemy.HP = enemyFormats[i]._HP;
+                tempEnemy._enemyType = (EnemyType) enemyFormats[i]._enemyType;
+                tempEnemy._attackPattern = (AttackPattern) enemyFormats[i]._attackPattern;
+                tempEnemy._moveSpeed = enemyFormats[i]._moveSpeed;
+                tempEnemy._rotateSpeed = enemyFormats[i]._rotateSpeed;
+                tempEnemy._bulletShootSpeed = enemyFormats[i]._bulletShootSpeed;
+                tempEnemy._bulletMoveSpeed = enemyFormats[i]._bulletMoveSpeed;
+                tempWave.Enemys.Add(tempEnemy);
+                LoadWave.Add(tempWave);
             }
         }
 
@@ -241,7 +242,14 @@ public static class WaveSaveLoad
         
         
         List<MapToolWaveManager.Wave> newWave = new List<MapToolWaveManager.Wave>();
-        newWave = LoadEnemy(enemyFormats,pathFormats);
+        newWave.AddRange(LoadEnemy(enemyFormats,pathFormats));
+        Debug.Log(newWave.Count + "개의 웨이브 존재");
+        for (int i = 0; i < newWave.Count; ++i)
+        {
+
+        }
+        
+        
     }
 }
 
