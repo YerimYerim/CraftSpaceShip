@@ -7,73 +7,108 @@ using UnityEngine;
 using Vector3 = UnityEngine.Vector3;
 
 
+[Serializable]
 public static class WaveSaveLoad
 {
     public static string FilePath = "Wave.json";
     public static List<MapToolWaveManager.Wave> Waves;
 
+    [Serializable]
     struct WaveFormat
     {
-        public int Num;
-        public int EnemyCount;
+        [SerializeField]public int Num;
+        [SerializeField]public int EnemyCount;
     }
-    struct EnemyFormat
+    
+    [Serializable]
+    public class EnemyFormat
     {
-        public int _parentWaveNum;
+        [SerializeField]public int _parentWaveNum;
         //
-        public int _HP;
+        [SerializeField]public int _HP;
         //Type
-        public int _enemyType;
-        public int _attackPattern;
+        [SerializeField]public int _enemyType;
+        [SerializeField]public int _attackPattern;
         //Speed
-        public float _moveSpeed;
-        public float _rotateSpeed;
+        [SerializeField]public float _moveSpeed;
+        [SerializeField]public float _rotateSpeed;
         //bullet
-        public float _bulletShootSpeed;
-        public float _bulletMoveSpeed;
+        [SerializeField]public float _bulletShootSpeed;
+        [SerializeField]public float _bulletMoveSpeed;
         //path
-        public int _pathCount;
+        [SerializeField]public int _pathCount;
     }
-    struct PathFormat
+    
+    [Serializable]
+    public class PathFormat
     {
-        public int _parentWaveNum;
-        public int _parentEnemyNum;
-        public Serialization<Vector3> _path;
+        [SerializeField]public int _parentWaveNum;
+        [SerializeField]public int _parentEnemyNum;
+        [SerializeField]public Serialization<Vector3> _path;
     }
-    static string saveVector(int WaveNum, int Enemynum , int vectorNum)
+    static string saveVector()
     {
         PathFormat pathFormat = new PathFormat();
-        pathFormat._parentWaveNum = WaveNum;
-        pathFormat._parentEnemyNum = Enemynum;
-        pathFormat._path = new Serialization<Vector3>(Waves[WaveNum].Enemys[Enemynum]._path);
-        
-        string ToJsonDataVector = JsonUtility.ToJson(pathFormat,true);
+        List<PathFormat> pathFormats  = new List<PathFormat>();
+        for(int j = 0; j < Waves.Count; ++j)
+        {
+            for(int t = 0; t<Waves[j].Enemys.Count; ++t)
+            {
+                pathFormat._parentWaveNum = j;        
+                pathFormat._parentEnemyNum = t;
+                for (int i = 0; i < Waves[j].Enemys[t]._path.Count; ++i)
+                {
+                    pathFormat._path = new Serialization<Vector3>(Waves[j].Enemys[t]._path);
+                }
+                pathFormats.Add(pathFormat);
+            }
+            
+        }
+        string ToJsonDataVector = JsonUtility.ToJson(new Serialization<PathFormat>(pathFormats),true);
         return ToJsonDataVector;
     }
-    static string saveEnemy(int WaveNum, int Enemynum)
-    {
-        EnemyFormat enemyFormat = new EnemyFormat();
-        enemyFormat._parentWaveNum = WaveNum;
-        enemyFormat._HP = Waves[WaveNum].Enemys[Enemynum].HP;
-        enemyFormat._enemyType = (int)Waves[WaveNum].Enemys[Enemynum]._enemyType;
-        enemyFormat._attackPattern = (int)Waves[WaveNum].Enemys[Enemynum]._attackPattern;
-        enemyFormat._moveSpeed = Waves[WaveNum].Enemys[Enemynum]._moveSpeed;
-        enemyFormat._rotateSpeed = Waves[WaveNum].Enemys[Enemynum]._rotateSpeed;
-        enemyFormat._bulletShootSpeed = Waves[WaveNum].Enemys[Enemynum]._bulletShootSpeed;
-        enemyFormat._bulletMoveSpeed = Waves[WaveNum].Enemys[Enemynum]._bulletMoveSpeed;
-        enemyFormat._pathCount = Waves[WaveNum].Enemys[Enemynum]._path.Count;
 
-        string ToJasonDataVector = JsonUtility.ToJson(enemyFormat, true);
-        return ToJasonDataVector;
+    static string saveEnemy()
+    {
+        List<EnemyFormat> enemyFormats = new List<EnemyFormat>();
+        EnemyFormat enemyFormat = new EnemyFormat();
+
+        for (int j = 0; j < Waves.Count; ++j)
+        {
+            for (int i = 0; i < Waves[j].Enemys.Count; ++i)
+            {
+
+                enemyFormat._parentWaveNum = j;
+                enemyFormat._HP = Waves[j].Enemys[i].HP;
+                enemyFormat._enemyType = (int) Waves[j].Enemys[i]._enemyType;
+                enemyFormat._attackPattern = (int) Waves[j].Enemys[i]._attackPattern;
+                enemyFormat._moveSpeed = Waves[j].Enemys[i]._moveSpeed;
+                enemyFormat._rotateSpeed = Waves[j].Enemys[i]._rotateSpeed;
+                enemyFormat._bulletShootSpeed = Waves[j].Enemys[i]._bulletShootSpeed;
+                enemyFormat._bulletMoveSpeed = Waves[j].Enemys[i]._bulletMoveSpeed;
+                enemyFormat._pathCount = Waves[j].Enemys[i]._path.Count;
+                enemyFormats.Add(enemyFormat);
+                Debug.Log(enemyFormat._pathCount);
+            } 
+        }
+
+        string toJsonDataEnemy = JsonUtility.ToJson(new Serialization<EnemyFormat>(enemyFormats), true);
+        return toJsonDataEnemy;
     }
 
-    static string saveWave(int waveNum)
+    static string saveWave()
     {
         WaveFormat waveFormat = new WaveFormat();
-        waveFormat.Num = waveNum;
-        waveFormat.EnemyCount = Waves[waveNum].Enemys.Count;
-        string ToJasonDataVector = JsonUtility.ToJson(waveFormat, true);
-        return ToJasonDataVector;
+        List<WaveFormat> waveFormats = new List<WaveFormat>();
+        for (int i = 0; i < Waves.Count; ++i)
+        {
+            waveFormat.Num = i;
+            waveFormat.EnemyCount = Waves[i].Enemys.Count;
+            waveFormats.Add(waveFormat);
+        }
+
+        string ToJasonDataWave = JsonUtility.ToJson(new Serialization<WaveFormat>(waveFormats), true);
+        return ToJasonDataWave;
     }
     
     public static void SaveAll()
@@ -84,24 +119,19 @@ public static class WaveSaveLoad
         string ToJsonDataPATH  = ""; 
         
         string filePathWAVE = Application.streamingAssetsPath+"WAVE" + FilePath;
-        string filePathENEMY = Application.streamingAssetsPath+ "ENEMY" + FilePath ;
+        string filePathENEMY = Application.streamingAssetsPath+ "ENEMY" + FilePath;
         string filePathPATH = Application.streamingAssetsPath + "PATH" + FilePath;
-
-        for (int i = 0; i <Waves.Count; ++i)
-        {
-            ToJsonDataWAVE += saveWave(i);
-            for (int j = 0; j <Waves[i].Enemys.Count; ++j)
-            {
-                ToJsonDataENEMY += saveEnemy(i, j);
-                for (int t = 0; t < Waves[i].Enemys[j]._path.Count; ++t)
-                {
-                    ToJsonDataPATH += saveVector(i,j , t);
-                }
-            }    
-        }
+        
+        ToJsonDataWAVE = saveWave();
+        ToJsonDataENEMY = saveEnemy();
+        ToJsonDataPATH = saveVector();
+         
+        
         
         Debug.Log(ToJsonDataWAVE);
-        
+        File.Delete(filePathWAVE);
+        File.Delete(filePathENEMY);
+        File.Delete(filePathPATH);
         File.WriteAllText(filePathWAVE, ToJsonDataWAVE);
         File.WriteAllText(filePathENEMY, ToJsonDataENEMY);
         File.WriteAllText(filePathPATH, ToJsonDataPATH);
@@ -116,10 +146,6 @@ public static class WaveSaveLoad
             WaveFormat waveFormat = JsonUtility.FromJson<WaveFormat>(FromJsonData);
             Debug.Log(FromJsonData);
         } 
-        
-        
-        
-        
         // 저장된 게임이 없다면
         // else
         // {

@@ -1,10 +1,16 @@
 {
-    "Num": 0,
-    "EnemyCount": 0
-}{
-    "Num": 1,
-    "EnemyCount": 3
-}{
-    "Num": 2,
-    "EnemyCount": 0
+    "_list": [
+        {
+            "Num": 0,
+            "EnemyCount": 0
+        },
+        {
+            "Num": 1,
+            "EnemyCount": 0
+        },
+        {
+            "Num": 2,
+            "EnemyCount": 5
+        }
+    ]
 }
