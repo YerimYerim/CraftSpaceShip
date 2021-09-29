@@ -21,11 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8a1e00c3-8cb6-4325-8b63-16678579c924" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CraftSpaceShip/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CraftSpaceShip/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/MapTool/MapToolWaveManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/MapTool/MapToolWaveManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/MapTool/WaveSaveLoad.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/MapTool/WaveSaveLoad.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssetsENEMYWave.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssetsENEMYWave.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssetsPATHWave.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssetsPATHWave.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssetsWAVEWave.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssetsWAVEWave.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,8 +45,8 @@
         <option value="$PROJECT_DIR$/Assets/Script/Enemy/Enemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/ReadData/XMLReader.cs" />
         <option value="$PROJECT_DIR$/Assets/StreamingAssetsWave.json" />
-        <option value="$PROJECT_DIR$/Assets/Script/MapTool/MapToolWaveManager.cs" />
         <option value="$PROJECT_DIR$/Assets/StreamingAssetsENEMYWave.json" />
+        <option value="$PROJECT_DIR$/Assets/Script/MapTool/MapToolWaveManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/MapTool/WaveSaveLoad.cs" />
       </list>
     </option>
@@ -67,6 +63,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -83,7 +80,7 @@
       <workItem from="1632759472397" duration="8349000" />
       <workItem from="1632805140769" duration="13160000" />
       <workItem from="1632842965531" duration="12604000" />
-      <workItem from="1632894960708" duration="35216000" />
+      <workItem from="1632894960708" duration="37207000" />
     </task>
     <servers />
   </component>
@@ -114,10 +111,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog/0.0.1920.1040/1920.181.1600.860@0.0.1920.1040" timestamp="1632842571491" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1632915288244">
+    <state x="616" y="240" key="run.anything.popup" timestamp="1632933342095">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/1920.181.1600.860@0.0.1920.1040" timestamp="1632915288244" />
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/1920.181.1600.860@0.0.1920.1040" timestamp="1632933342095" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1632829417572">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

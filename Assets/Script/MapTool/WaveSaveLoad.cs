@@ -107,21 +107,13 @@ public static class WaveSaveLoad
        {
            Enemy tempEnemy;
            EnemyFromatToEnemy(enemyFormats[enemyIndex], out tempEnemy);
-           tempEnemy._path = new List<Vector3>();
-
-
-           for (int pathIndex = 0; pathIndex < pathFormats.Count; ++pathIndex)
-           {
-               if (enemyFormats[enemyIndex]._parentWaveNum == pathFormats[pathIndex]._parentWaveNum)
-               {
-                   if (enemyIndex == pathFormats[pathIndex]._parentEnemyNum)
-                   {
-                       tempEnemy._path.AddRange(pathFormats[pathIndex]._path.ToList());
-                   }
-               }
-           }
-           
            waves[enemyFormats[enemyIndex]._parentWaveNum].Enemys.Add(tempEnemy);
+       }        
+       for (int pathIndex = 0; pathIndex < pathFormats.Count; ++pathIndex)
+       {
+           int parentWavenum = pathFormats[pathIndex]._parentWaveNum;
+           int parentEnemynum = pathFormats[pathIndex]._parentEnemyNum;
+           waves[parentWavenum].Enemys[parentEnemynum]._path = new List<Vector3>(pathFormats[pathIndex]._path.ToList());
        }
        return waves;
     }
@@ -229,7 +221,7 @@ public static class WaveSaveLoad
         
         string PathText = File.ReadAllText(filePathPATH);
         List<PathFormat> pathFormats = JsonUtility.FromJson<Serialization<PathFormat>>(PathText).ToList();
-        
+
         string WaveText = File.ReadAllText(filePathWAVE);
         List<WaveFormat> waveFormats = JsonUtility.FromJson<Serialization<WaveFormat>>(WaveText).ToList();
         
