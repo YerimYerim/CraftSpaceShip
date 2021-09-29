@@ -43,17 +43,16 @@ public class PlayerTurret : MonoBehaviour
         }
         for (int i = 0; i < TurretsCount; ++i)
         {
-            Speed[i] = 8.0f;
             TurretsBullets[i].init();    
-            AttackPatterns[i] = AttackPattern.ONE;
-            TurretsLevel[i] = 1;
+            AttackPatterns[i] = (AttackPattern)PlayerStatus.turretPosTypes[i];
+            TurretsLevel[i] = PlayerStatus._turretinfos[(int)AttackPatterns[i]]._level;
+            Speed[i] = PlayerStatus._turretinfos[(int)AttackPatterns[i]]._speed;
         }
 
         for(int i = 0; i<TurretsCount; ++i)
         {
             int t = i;
             ShooterCoroutine.Add(StartCoroutine(ShootTimer(0.1f, AttackPatterns[t], Speed[t], TurretsBullets[t])));
-            
         }
     }
 

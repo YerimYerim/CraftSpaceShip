@@ -156,17 +156,17 @@ public class StartSceneManager : MonoBehaviour
             TurretToButtonLines[i].SetPosition(1 , GameObject.Find("TurretsPosition").transform.GetChild(i).transform.position);
         }    
         
-        turretPosTypes = new List<int>();
+        PlayerStatus.turretPosTypes = new List<int>();
         for (int i = 0; i < TurretPosButtons.Count; ++i)
         {
             if (PlayerPrefs.HasKey("TurretPos" + i))
             {
-                turretPosTypes.Add(PlayerPrefs.GetInt("TurretPos" + i ));
+                PlayerStatus.turretPosTypes.Add(PlayerPrefs.GetInt("TurretPos" + i ));
                 SetTurretPosSprite(i);
             }
             else
             {
-                turretPosTypes.Add(0);
+                PlayerStatus.turretPosTypes.Add(0);
                 saveTurretPosType(i);
                 SetTurretPosSprite(i);
             }
@@ -228,12 +228,12 @@ public class StartSceneManager : MonoBehaviour
     private void SetTurretPosSprite(int TypeNum)
     {
         TurretPosButtons[TypeNum].transform.GetChild(0).GetComponent<Image>().sprite =
-            PlayerStatus._turretinfos[turretPosTypes[TypeNum]]._sprite;
+            PlayerStatus._turretinfos[PlayerStatus.turretPosTypes[TypeNum]]._sprite;
     }
 
     private void saveTurretPosType(int i)
     {
-        PlayerPrefs.SetInt("TurretPos" + i, turretPosTypes[i]);
+        PlayerPrefs.SetInt("TurretPos" + i, PlayerStatus.turretPosTypes[i]);
     }
 
     private int SetTurretDamage(Turretinfo turretinfo)
@@ -256,7 +256,7 @@ public class StartSceneManager : MonoBehaviour
     {
         // num 에 터렛 바꿔주면 됨
         TurretPosButtons[num].transform.GetChild(0).GetComponent<Image>().sprite = PlayerStatus._turretinfos[SelectedTurretType]._sprite;
-        turretPosTypes[num] = SelectedTurretType;
+        PlayerStatus.turretPosTypes[num] = SelectedTurretType;
         PlayerPrefs.SetInt("TurretPos" + num , SelectedTurretType );
     }
 
