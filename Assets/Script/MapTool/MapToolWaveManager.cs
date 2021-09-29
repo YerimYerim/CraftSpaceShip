@@ -8,16 +8,16 @@ using UnityEngine.UI;
 [Serializable]
 public class Serialization<T>
 {
-    [SerializeField] List<T> Wave;
+    [SerializeField] List<T> _list;
 
     public List<T> ToList()
     {
-        return Wave;
+        return _list;
     }
 
     public Serialization(List<T> target)
     {
-        this.Wave = target;
+        this._list = target;
     }
 };
 [Serializable]
@@ -120,6 +120,8 @@ public class MapToolWaveManager : MonoBehaviour
         {
             addWaveButton = GameObject.Find("AddWaveButton").GetComponent<Button>();
             waveListParent = GameObject.Find("WavesView").transform.GetChild(0).GetChild(0);
+            nowWaveNum = 0;
+            nowMaxWaveNum = 0;
             addWaveButton.onClick.AddListener(OnClickAddWaveButton);
         }
 
@@ -290,7 +292,8 @@ public class MapToolWaveManager : MonoBehaviour
         Waves.Add(TempWave);
         WaveButton.Add(TempWavePrefab);
 
-        nowEnemyNum = -1;
+        nowEnemyNum = 0;
+        print("Ss");
         nowWaveNum = nowMaxWaveNum;
         ++nowMaxWaveNum;
     }
@@ -359,13 +362,14 @@ public class MapToolWaveManager : MonoBehaviour
     }
     void Save()
     {
-        string json = JsonUtility.ToJson(new Serialization<Wave>(Waves), true);
-        print(json);
+        WaveSaveLoad.Waves = new List<Wave>();
+        WaveSaveLoad.Waves = Waves;
+        WaveSaveLoad.SaveAll();
     }
     
 
     void Load()
     {
-        
+        WaveSaveLoad.LoadGameData();
     }
 }

@@ -48,6 +48,7 @@
           </e>
           <e p="MapTool" t="Include">
             <e p="MapToolWaveManager.cs" t="Include" />
+            <e p="WaveSaveLoad.cs" t="Include" />
           </e>
           <e p="ObjectPolling" t="Include">
             <e p="ObjectPoolManager.cs" t="Include" />

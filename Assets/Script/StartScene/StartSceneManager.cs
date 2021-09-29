@@ -105,7 +105,7 @@ public class StartSceneManager : MonoBehaviour
         TurretTypeButtons = new List<Button>();
         _turretinfos = new List<Turretinfo>();
         
-        XMLReader.LoadXML(Application.dataPath + "/DATA.xml", out _turretinfos);
+        XMLReader.LoadXMLTurretTable(Application.dataPath + "/DATA.xml", out _turretinfos);
         //터렛 정보 저장
         for (int i = 0; i < _turretinfos.Count; ++i)
         {

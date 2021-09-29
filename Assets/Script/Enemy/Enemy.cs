@@ -178,4 +178,9 @@ public class Enemy : MonoBehaviour
 
         }
     }
+
+    void SaveEnemy()
+    {
+        
+    }
 }

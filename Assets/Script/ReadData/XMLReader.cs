@@ -8,7 +8,7 @@ using UnityEngine;
 public static class XMLReader 
 {
 
-    public static void LoadXML(string filepath, out List <StartSceneManager.Turretinfo> turret)
+    public static void LoadXMLTurretTable(string filepath, out List <StartSceneManager.Turretinfo> turret)
     {
         //데이터를 형성할 문서 생성 및 파일읽기
 
@@ -35,6 +35,13 @@ public static class XMLReader
             turret.Add(turretinfo);
         }
     }
+
+    public static XmlDocument SaveXMLWave(List<MapToolWaveManager.Wave> waves)
+    {
+        XmlDocument doc = new XmlDocument();
+        return doc;
+    }
+    
     public static AttackPattern GetStringtoBulletType(string attackPattern)
     {
         switch (attackPattern)
