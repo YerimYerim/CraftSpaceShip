@@ -141,10 +141,14 @@ public static class WaveSaveLoad
                 tempEnemy._bulletMoveSpeed = enemyFormats[EnemyNum]._bulletMoveSpeed;
                 for (int t = 0; t < pathFormats.Count; ++t)
                 {
+
                     if (pathFormats[t]._parentEnemyNum == EnemyNum)
                     {
                         tempEnemy._path = new List<Vector3>();
-                        tempEnemy._path.AddRange(pathFormats[t]._path.ToList());
+                        for (int pathNum = 0; pathNum < pathFormats[t]._path.ToList().Count; ++pathNum)
+                        {
+                            tempEnemy._path.Add(pathFormats[t]._path.ToList()[pathNum]);
+                        }
                     }
                     
                 }
@@ -253,7 +257,18 @@ public static class WaveSaveLoad
         
         List<MapToolWaveManager.Wave> newWave = new List<MapToolWaveManager.Wave>();
         newWave.AddRange(LoadEnemy(enemyFormats,pathFormats));
-
+        for (int i = 0; i < newWave[0].Enemys[0]._path.Count; ++i)
+        {
+            Debug.Log("0 번쨰 Path"+newWave[0].Enemys[0]._path[i]);
+        }
+        for (int i = 0; i < newWave[1].Enemys[0]._path.Count; ++i)
+        {
+            Debug.Log("0 번쨰 Path"+newWave[0].Enemys[1]._path[i]);
+        }
+        for (int i = 0; i < newWave[2].Enemys[0]._path.Count; ++i)
+        {
+            Debug.Log("0 번쨰 Path"+newWave[0].Enemys[2]._path[i]);
+        }
         return newWave;
     }
 }
