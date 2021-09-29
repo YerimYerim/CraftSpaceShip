@@ -57,7 +57,7 @@ public class StartSceneManager : MonoBehaviour
     
     [Header("selected Buttons info")] 
     [SerializeField]private int SelectedTurretType = 0;
-    [SerializeField]private List<int> turretPosTypes;
+
 
     [Header("Gold")] 
     [SerializeField] private int GoldCount;

@@ -48,7 +48,7 @@ public class PlayerTurret : MonoBehaviour
             AttackPatterns[i] = AttackPattern.ONE;
             TurretsLevel[i] = 1;
         }
-        AttackPatterns[2] = AttackPattern.THREE;
+
         for(int i = 0; i<TurretsCount; ++i)
         {
             int t = i;

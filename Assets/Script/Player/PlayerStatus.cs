@@ -33,8 +33,9 @@ public class PlayerStatus : MonoBehaviour
     
     private static Text _scoreTextUI;
     private static Text _comboTextUI;
-    
     public static List<Turretinfo> _turretinfos;
+    public static List<int> turretPosTypes;
+    
     void Awake()
     {
         if (instance == null)
@@ -44,7 +45,6 @@ public class PlayerStatus : MonoBehaviour
         _scoreTextUI = GameObject.Find("ScoreText").GetComponent<Text>();
         _comboTextUI = GameObject.Find("ComboText").GetComponent<Text>();
 
-        PlayerPrefs.GetInt("TurretPos");
         ResetCombo();
         ResetScore();
     }
