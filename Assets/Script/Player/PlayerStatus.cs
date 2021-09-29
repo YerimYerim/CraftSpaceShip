@@ -3,7 +3,20 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.UI;
+public struct Turretinfo
+{
+    //xml 로부터 읽어오는 db
+    public AttackPattern _attackPattern;
+    public string _name;
+    public string _info;
 
+    //유저가 가지고있는 정보
+    public int _level;
+    public int _speed;
+    public int _damage;
+    //이름에 따라 가져오는 부분
+    public Sprite _sprite;
+}
 public class PlayerStatus : MonoBehaviour
 {
     public static PlayerStatus instance;
@@ -20,7 +33,8 @@ public class PlayerStatus : MonoBehaviour
     
     private static Text _scoreTextUI;
     private static Text _comboTextUI;
-
+    
+    public static List<Turretinfo> _turretinfos;
     void Awake()
     {
         if (instance == null)
@@ -29,6 +43,8 @@ public class PlayerStatus : MonoBehaviour
         }
         _scoreTextUI = GameObject.Find("ScoreText").GetComponent<Text>();
         _comboTextUI = GameObject.Find("ComboText").GetComponent<Text>();
+
+        PlayerPrefs.GetInt("TurretPos");
         ResetCombo();
         ResetScore();
     }
