@@ -30,7 +30,8 @@ public class MapToolWaveManager : MonoBehaviour
         public List<Enemy> Enemys;
     }
 
-    [Header("Prefab")] [SerializeField] private GameObject EnemyModelPrefab;
+    [Header("Prefab")] 
+    [SerializeField] private GameObject EnemyModelPrefab;
     [SerializeField] private GameObject EnemyListPrefab;
     [SerializeField] private GameObject WaveListPrefab;
     [SerializeField] private GameObject PointPrefab;
@@ -41,14 +42,8 @@ public class MapToolWaveManager : MonoBehaviour
 
     [Header("Wave add Button")] [SerializeField]
     private Button addWaveButton;
-
-    [SerializeField] private Button deleteWaveButton;
-
     [Header("EnemySelect Button")] [SerializeField]
     private Button waveSelectButton;
-
-    [SerializeField] private Button bossSelectButton;
-
     [Header("Enemytype setting")] [SerializeField]
     private Button miniSelectButton;
 
@@ -66,7 +61,6 @@ public class MapToolWaveManager : MonoBehaviour
 
     [SerializeField] private Transform PointParent;
     
-    [SerializeField] private Button deletePointButton;
     [SerializeField] private InputField xInput;
     [SerializeField] private InputField yInput;
     [SerializeField] private InputField moveSpeedInput;
@@ -74,21 +68,15 @@ public class MapToolWaveManager : MonoBehaviour
     [SerializeField] private int nowSelectVector = -1;
     [SerializeField] private Vector3 tempVector3 = new Vector3(0, 0, 0);
 
-    [Header("Movement Setting")] [SerializeField]
-    private Button leftTurnButton;
-
-    [SerializeField] private Button rightTurnButton;
-    [SerializeField] private Text rotationSpeedInput;
+    [Header("Movement Setting")] 
+    [SerializeField] private InputField rotationSpeedInput;
 
     [Header("Hp Setting")] [SerializeField]
-    private Text HpInput;
+    private InputField HpInput;
 
     [Header("Enemy add and Delete buttons")] [SerializeField]
     private Button addEnemyButton;
-
-    [SerializeField] private Button deleteEnemyButton;
-    [SerializeField] private Button resetEnemyButton;
-
+    
 
     [Header("Wave and Object Buttons List")] [SerializeField]
     private List<GameObject> WaveButton;
@@ -111,6 +99,11 @@ public class MapToolWaveManager : MonoBehaviour
     [SerializeField] private Button loadButton;
     void Awake()
     {
+        rotationSpeedInput = GameObject.Find("RotationSpeedInput").GetComponent<InputField>();
+        rotationSpeedInput.onValueChanged.AddListener(delegate(string str) { OnValueChangeRotateSpeed(str);  });
+        HpInput = GameObject.Find("HpInput").GetComponent<InputField>();
+        HpInput.onValueChanged.AddListener(delegate(string str) { OnValueChangeHP(str);  });
+        
         _lineRenderer = GetComponent<LineRenderer>();
         _lineRenderer.positionCount = 0;
         WaveButton = new List<GameObject>();
@@ -180,13 +173,24 @@ public class MapToolWaveManager : MonoBehaviour
             loadButton = GameObject.Find("LoadButton").GetComponent<Button>();
             loadButton.onClick.AddListener(Load);
         }
+        
+        
     }
-
+    
     private void OnValueChangeMoveSpeed(string speed)
     {
         Waves[nowWaveNum].Enemys[nowEnemyNum]._moveSpeed = float.Parse(speed);
     }
 
+    private void OnValueChangeRotateSpeed(string speed)
+    {
+        Waves[nowWaveNum].Enemys[nowEnemyNum]._rotateSpeed = float.Parse(speed);
+    }
+
+    private void OnValueChangeHP(string hp)
+    {
+        Waves[nowWaveNum].Enemys[nowEnemyNum].HP = int.Parse(hp);
+    }
     void Update()
     {
         if ( Input.GetMouseButtonDown(0) && nowEnemyNum != -1)
@@ -370,6 +374,6 @@ public class MapToolWaveManager : MonoBehaviour
 
     void Load()
     {
-        WaveSaveLoad.LoadGameData();
+        WaveSaveLoad.Load();
     }
 }

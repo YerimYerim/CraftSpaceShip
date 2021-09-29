@@ -2,15 +2,11 @@
     "_list": [
         {
             "Num": 0,
-            "EnemyCount": 0
+            "EnemyCount": 2
         },
         {
             "Num": 1,
-            "EnemyCount": 0
-        },
-        {
-            "Num": 2,
-            "EnemyCount": 5
+            "EnemyCount": 1
         }
     ]
 }
