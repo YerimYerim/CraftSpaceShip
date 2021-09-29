@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Numerics;
 using System.Runtime.InteropServices;
 using UnityEngine;
@@ -90,76 +91,53 @@ public static class WaveSaveLoad
         string toJsonDataEnemy = JsonUtility.ToJson(new Serialization<EnemyFormat>(enemyFormats), true);
         return toJsonDataEnemy;
     }
-    static List<MapToolWaveManager.Wave> LoadEnemy(List<EnemyFormat> enemyFormats,List<PathFormat> pathFormats)
-    {
-        List<MapToolWaveManager.Wave> LoadWave = new List<MapToolWaveManager.Wave>();
-        MapToolWaveManager.Wave tempWave = new MapToolWaveManager.Wave();
-        Enemy tempEnemy = new Enemy();
-        for (int EnemyNum = 0; EnemyNum < enemyFormats.Count; ++EnemyNum)
-        {
-            bool isHasParentWave = false;
-            for (int WaveNum = 0; WaveNum < LoadWave.Count; ++WaveNum)
-            {
-                if (LoadWave[WaveNum].waveNum == enemyFormats[EnemyNum]._parentWaveNum)
-                {
-                    //만약 내 부모가 있다면 여기서 enemy 를 만들어서 add 만 해주고 return
-                    isHasParentWave = true;
-                    tempEnemy.HP = enemyFormats[EnemyNum]._HP;
-                    tempEnemy._enemyType = (EnemyType) enemyFormats[EnemyNum]._enemyType;
-                    tempEnemy._attackPattern = (AttackPattern) enemyFormats[EnemyNum]._attackPattern;
-                    tempEnemy._moveSpeed = enemyFormats[EnemyNum]._moveSpeed;
-                    tempEnemy._rotateSpeed = enemyFormats[EnemyNum]._rotateSpeed;
-                    tempEnemy._bulletShootSpeed = enemyFormats[EnemyNum]._bulletShootSpeed;
-                    tempEnemy._bulletMoveSpeed = enemyFormats[EnemyNum]._bulletMoveSpeed;
+    static List<MapToolWaveManager.Wave> LoadEnemy(List<WaveFormat> waveFormats, List<EnemyFormat> enemyFormats,List<PathFormat> pathFormats)
+    { 
 
-                    for (int t = 0; t < pathFormats.Count; ++t)
-                    {
+       List<  MapToolWaveManager.Wave> waves = new List<MapToolWaveManager.Wave>();
+       for (int waveIndex = 0; waveIndex < waveFormats.Count; ++waveIndex)
+       {
+           MapToolWaveManager.Wave tempWave = new MapToolWaveManager.Wave();
+           tempWave.waveNum = waveFormats[waveIndex].Num;
+           tempWave.Enemys = new List<Enemy>();
+           waves.Add(tempWave);
+       }
 
-                        if (pathFormats[t]._parentWaveNum == WaveNum)
-                        {
-                            if (pathFormats[t]._parentEnemyNum == EnemyNum)
-                            {
-                                tempEnemy._path = new List<Vector3>();
-                                tempEnemy._path.AddRange(pathFormats[t]._path.ToList());
-                            }
-                        }
-                    }
-                    LoadWave[WaveNum].Enemys.Add(tempEnemy);
-                }
-            }
-            if(LoadWave.Count == 0 || isHasParentWave == false)
-            {
-                tempWave.waveNum = enemyFormats[EnemyNum]._parentWaveNum;
-                tempWave.Enemys = new List<Enemy>();
-                    
-                tempEnemy.HP = enemyFormats[EnemyNum]._HP;
-                tempEnemy._enemyType = (EnemyType) enemyFormats[EnemyNum]._enemyType;
-                tempEnemy._attackPattern = (AttackPattern) enemyFormats[EnemyNum]._attackPattern;
-                tempEnemy._moveSpeed = enemyFormats[EnemyNum]._moveSpeed;
-                tempEnemy._rotateSpeed = enemyFormats[EnemyNum]._rotateSpeed;
-                tempEnemy._bulletShootSpeed = enemyFormats[EnemyNum]._bulletShootSpeed;
-                tempEnemy._bulletMoveSpeed = enemyFormats[EnemyNum]._bulletMoveSpeed;
-                for (int t = 0; t < pathFormats.Count; ++t)
-                {
+       for (int enemyIndex = 0; enemyIndex < enemyFormats.Count; enemyIndex++)
+       {
+           Enemy tempEnemy;
+           EnemyFromatToEnemy(enemyFormats[enemyIndex], out tempEnemy);
+           tempEnemy._path = new List<Vector3>();
 
-                    if (pathFormats[t]._parentEnemyNum == EnemyNum)
-                    {
-                        tempEnemy._path = new List<Vector3>();
-                        for (int pathNum = 0; pathNum < pathFormats[t]._path.ToList().Count; ++pathNum)
-                        {
-                            tempEnemy._path.Add(pathFormats[t]._path.ToList()[pathNum]);
-                        }
-                    }
-                    
-                }
-                tempWave.Enemys.Add(tempEnemy);
-                LoadWave.Add(tempWave);
-            }
-        }
 
-        return LoadWave;
+           for (int pathIndex = 0; pathIndex < pathFormats.Count; ++pathIndex)
+           {
+               if (enemyFormats[enemyIndex]._parentWaveNum == pathFormats[pathIndex]._parentWaveNum)
+               {
+                   if (enemyIndex == pathFormats[pathIndex]._parentEnemyNum)
+                   {
+                       tempEnemy._path.AddRange(pathFormats[pathIndex]._path.ToList());
+                   }
+               }
+
+           }
+           waves[enemyFormats[enemyIndex]._parentWaveNum].Enemys.Add(tempEnemy);
+       }
+       return waves;
     }
-    
+
+    private static void EnemyFromatToEnemy(EnemyFormat enemyFormats, out Enemy enemy)
+    {
+        enemy = new Enemy();
+        enemy.HP = enemyFormats._HP;
+        enemy._enemyType = (EnemyType) enemyFormats._enemyType;
+        enemy._attackPattern = (AttackPattern) enemyFormats._attackPattern;
+        enemy._moveSpeed = enemyFormats._moveSpeed;
+        enemy._rotateSpeed = enemyFormats._rotateSpeed;
+        enemy._bulletShootSpeed = enemyFormats._bulletShootSpeed;
+        enemy._bulletMoveSpeed = enemyFormats._bulletMoveSpeed;
+    }
+
     static string saveWave()
     {
         WaveFormat waveFormat = new WaveFormat();
@@ -241,12 +219,10 @@ public static class WaveSaveLoad
         string ToJsonDataENEMY  = ""; 
         string ToJsonDataPATH  = ""; 
         
-        string filePathWAVE = Application.streamingAssetsPath+"WAVE" + FilePath;
         string filePathENEMY = Application.streamingAssetsPath+ "ENEMY" + FilePath;
         string filePathPATH = Application.streamingAssetsPath + "PATH" + FilePath;
-
-        string WaveText = File.ReadAllText(filePathWAVE);
-        List<WaveFormat> waveFormats =JsonUtility.FromJson<Serialization<WaveFormat>>(WaveText).ToList();
+        string filePathWAVE = Application.streamingAssetsPath+"WAVE" + FilePath;
+        
         
         string EnemyText = File.ReadAllText(filePathENEMY);
         List<EnemyFormat> enemyFormats = JsonUtility.FromJson<Serialization<EnemyFormat>>(EnemyText).ToList();
@@ -254,21 +230,31 @@ public static class WaveSaveLoad
         string PathText = File.ReadAllText(filePathPATH);
         List<PathFormat> pathFormats = JsonUtility.FromJson<Serialization<PathFormat>>(PathText).ToList();
         
+        string WaveText = File.ReadAllText(filePathWAVE);
+        List<WaveFormat> waveFormats = JsonUtility.FromJson<Serialization<WaveFormat>>(WaveText).ToList();
+        
         
         List<MapToolWaveManager.Wave> newWave = new List<MapToolWaveManager.Wave>();
-        newWave.AddRange(LoadEnemy(enemyFormats,pathFormats));
-        for (int i = 0; i < newWave[0].Enemys[0]._path.Count; ++i)
+       newWave.AddRange(LoadEnemy(waveFormats ,enemyFormats,pathFormats));
+
+        #region Editor
+
+        for (int i = 0; i < newWave.Count; ++i)
         {
-            Debug.Log("0 번쨰 Path"+newWave[0].Enemys[0]._path[i]);
+            for (int j = 0; j < newWave[i].Enemys.Count; ++j)
+            {
+                Debug.Log("SAVE :wave " +i + "enemy"+ j +"pattern" + newWave[i].Enemys[j]._attackPattern);
+                for (int t = 0; t < newWave[i].Enemys[j]._path.Count; ++t)
+                {
+                    Debug.Log("SAVE :wave " +i + "enemy"+ j + "Path" + t + "vector"+newWave[i].Enemys[j]._path[t]);
+                }
+            }
         }
-        for (int i = 0; i < newWave[1].Enemys[0]._path.Count; ++i)
-        {
-            Debug.Log("0 번쨰 Path"+newWave[0].Enemys[1]._path[i]);
-        }
-        for (int i = 0; i < newWave[2].Enemys[0]._path.Count; ++i)
-        {
-            Debug.Log("0 번쨰 Path"+newWave[0].Enemys[2]._path[i]);
-        }
+        
+
+        #endregion
+        
+        
         return newWave;
     }
 }

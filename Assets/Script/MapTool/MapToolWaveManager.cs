@@ -395,11 +395,12 @@ public class MapToolWaveManager : MonoBehaviour
                 setEnemy();
                 for (int pathNum = 0; pathNum < waves[waveNum].Enemys[enemyNum]._path.Count; ++pathNum)
                 {
+                    print("wave " + waveNum + "Enemy " + enemyNum + "path" + pathNum + "vector" + waves[waveNum].Enemys[enemyNum]._path[pathNum]);
                     tempVector3.x = waves[waveNum].Enemys[enemyNum]._path[pathNum].x;
                     tempVector3.y = -0.8f;
                     tempVector3.z = waves[waveNum].Enemys[enemyNum]._path[pathNum].z;
 
-                    Waves[waveNum].Enemys[enemyNum]._path.Add(new Vector3(tempVector3.x, -0.8f, tempVector3.z));
+                    Waves[waveNum].Enemys[enemyNum]._path.Add(tempVector3);
 
                 }
             }
