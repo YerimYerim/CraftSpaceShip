@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Net.Mime;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameOverPannelManager : MonoBehaviour
@@ -20,13 +21,28 @@ public class GameOverPannelManager : MonoBehaviour
       NowScoreText = GameObject.Find("NowScoreText").GetComponent<Text>();
       MaxComboText = GameObject.Find("MaxComboText").GetComponent<Text>();
       RestartButton = GameObject.Find("RestartButton").GetComponent<Button>();
+      RestartButton.onClick.AddListener(delegate { reStartButtonOnClick(); });
+
       ExitButton = GameObject.Find("ExitButton").GetComponent<Button>();
+      ExitButton.onClick.AddListener(delegate { ExitButtonOnClick(); });
+      
       pannelAnimator = GameObject.Find("SocreBoardPannel").GetComponent<Animator>();
       SocreBoardPannel = GameObject.Find("SocreBoardPannel");
       PlayerStatus.GetScorePannel();
       SocreBoardPannel.SetActive(false);
    }
 
+   void reStartButtonOnClick()
+   {
+      PlayerStatus.ResetScore();
+      PlayerStatus.isGameEnd = false;
+      
+      SceneManager.LoadScene("StartScene");
+   }
+   void ExitButtonOnClick()
+   {
+      Application.Quit();
+   }
    void Update()
    {
       if (PlayerStatus.isGameEnd)
@@ -35,8 +51,23 @@ public class GameOverPannelManager : MonoBehaviour
       }
       if (PlayerStatus.isGameEnd == true && isScoringStart == false && pannelAnimator.GetCurrentAnimatorStateInfo(0).IsName("GameScoreAni"))
       {
+         if (PlayerStatus._BestScore < PlayerStatus._ScoreCount)
+         {
+            PlayerStatus._BestScore = PlayerStatus._ScoreCount;
+            PlayerPrefs.SetInt("MaxScore", PlayerStatus._ScoreCount);
+         }
+         if (PlayerStatus._MaxCombo < PlayerStatus._ComboCount)
+         {
+            PlayerStatus._MaxCombo = PlayerStatus._ComboCount;
+            PlayerPrefs.SetInt("MaxCombo", PlayerStatus._ComboCount);
+         }
+         
+
+         
          StartCoroutine(BestScoreCoroutine());
+         
          isScoringStart = true;
+
       }
    }
    IEnumerator BestScoreCoroutine()

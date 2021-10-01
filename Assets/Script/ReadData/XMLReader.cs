@@ -24,11 +24,13 @@ public static class XMLReader
         //루트에서 요소 꺼내기
         foreach (XmlElement node in nodes.ChildNodes)
         {
-            Turretinfo turretinfo = new Turretinfo();
+            Turretinfo turretinfo = new Turretinfo
+            {
+                _attackPattern = GetStringtoBulletType(node.GetAttribute("_attackPattern")),
+                _name = node.GetAttribute("_name"),
+                _info = node.GetAttribute("_info")
+            };
 
-            turretinfo._attackPattern = GetStringtoBulletType(node.GetAttribute("_attackPattern"));
-            turretinfo._name = node.GetAttribute("_name");
-            turretinfo._info = node.GetAttribute("_info");
 
             //가져온 데이터를 리스트에 입력
             turret.Add(turretinfo);
@@ -60,7 +62,7 @@ public static class XMLReader
         return doc;
     }
     
-    public static AttackPattern GetStringtoBulletType(string attackPattern)
+    private static AttackPattern GetStringtoBulletType(string attackPattern)
     {
         switch (attackPattern)
         {

@@ -20,193 +20,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8a1e00c3-8cb6-4325-8b63-16678579c924" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Prefab/Enemy.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefab/Enemy/EnemyBIG.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefab/Enemy/EnemyBIG.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefab/Enemy/EnemyMIDDLE.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefab/Enemy/EnemyMIDDLE.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefab/Enemy/EnemyMINI.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefab/Enemy/EnemyMINI.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/DATA.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/DATA.xml.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StreamingAssetsENEMYWave.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StreamingAssetsENEMYWave.json.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StreamingAssetsPATHWave.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StreamingAssetsPATHWave.json.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StreamingAssetsWAVEWave.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/StreamingAssetsWAVEWave.json.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/StreamingAssets.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/StreamingAssets/DATA.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/StreamingAssets/DATA.xml.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/StreamingAssets/StreamingAssetsENEMYWave.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/StreamingAssets/StreamingAssetsENEMYWave.json.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/StreamingAssets/StreamingAssetsPATHWave.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/StreamingAssets/StreamingAssetsPATHWave.json.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/StreamingAssets/StreamingAssetsWAVEWave.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/StreamingAssets/StreamingAssetsWAVEWave.json.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/StreamingAssets/build_info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/StreamingAssets/build_info.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/README.md.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Editor.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Editor/ReporterEditor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Editor/ReporterEditor.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/ComputerIcon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/ComputerIcon.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/Save.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/Save.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/UnityIcon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/UnityIcon.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/back.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/back.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/bar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/bar.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/buildFrom.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/buildFrom.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/button_active.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/button_active.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/chart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/chart.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/clear.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/clear.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/clearOnSceneLoaded.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/clearOnSceneLoaded.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/close.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/close.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/collapse.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/collapse.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/copy.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/copy.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/date.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/date.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/error_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/error_icon.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/even_log.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/even_log.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/fps.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/fps.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/graphicCard.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/graphicCard.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/info.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/info.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/log_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/log_icon.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/memory.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/memory.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/odd_log.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/odd_log.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/reporterScrollerSkin.guiskin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/reporterScrollerSkin.guiskin.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/scroller_down_arraw.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/scroller_down_arraw.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/scroller_horizental_back.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/scroller_horizental_back.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/scroller_horizental_thumb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/scroller_horizental_thumb.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/scroller_left_arraw.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/scroller_left_arraw.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/scroller_right_arraw.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/scroller_right_arraw.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/scroller_up_arraw.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/scroller_up_arraw.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/scroller_vertical_back.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/scroller_vertical_back.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/scroller_vertical_thumb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/scroller_vertical_thumb.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/search.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/search.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/selected.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/selected.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/software.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/software.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/timer_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/timer_1.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/user.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/user.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/warning_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Images/warning_icon.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/MultiKeyDictionary.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/MultiKeyDictionary.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Reporter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Reporter.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/ReporterGUI.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/ReporterGUI.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/ReporterMessageReceiver.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/ReporterMessageReceiver.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Test.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Test/Reporter.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Test/Reporter.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Test/ReporterScene.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Test/ReporterScene.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Test/Rotate.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Test/Rotate.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Test/TestReporter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Test/TestReporter.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Test/test1.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Test/test1.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Test/test2.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Test/test2.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/ReporterDocumentation.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/ReporterDocumentation/GCMem.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/ReporterDocumentation/GCMem.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/ReporterDocumentation/clear.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/ReporterDocumentation/clear.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/ReporterDocumentation/clearOnNewScene.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/ReporterDocumentation/clearOnNewScene.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/ReporterDocumentation/collapse.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/ReporterDocumentation/collapse.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/ReporterDocumentation/error.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/ReporterDocumentation/error.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/ReporterDocumentation/fps.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/ReporterDocumentation/fps.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/ReporterDocumentation/index.htm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/ReporterDocumentation/index.htm.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/ReporterDocumentation/info.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/ReporterDocumentation/info.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/ReporterDocumentation/log.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/ReporterDocumentation/log.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/ReporterDocumentation/scene.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/ReporterDocumentation/scene.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/ReporterDocumentation/screenShot11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/ReporterDocumentation/screenShot11.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/ReporterDocumentation/screenShot21.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/ReporterDocumentation/screenShot21.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/ReporterDocumentation/screenShot3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/ReporterDocumentation/screenShot3.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/ReporterDocumentation/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/ReporterDocumentation/style.css.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/ReporterDocumentation/time.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/ReporterDocumentation/time.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/ReporterDocumentation/warning.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/ReporterDocumentation/warning.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Script/ReadData/WaveSaveLoad.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Script/ReadData/WaveSaveLoad.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CraftSpaceShip/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CraftSpaceShip/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CraftSpaceShip/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CraftSpaceShip/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DATA.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DATA.xml.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Enemy_Ship_L1_01.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Enemy_Ship_L1_01.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Enemy/EnemyBIG.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Enemy/EnemyBIG.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Enemy/EnemyMIDDLE.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Enemy/EnemyMIDDLE.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Enemy/EnemyMINI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Enemy/EnemyMINI.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StreamingAssetsENEMYWave.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/StreamingAssetsENEMYWave.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StreamingAssetsENEMYWave.json.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/StreamingAssetsENEMYWave.json.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StreamingAssetsPATHWave.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/StreamingAssetsPATHWave.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StreamingAssetsPATHWave.json.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/StreamingAssetsPATHWave.json.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StreamingAssetsWAVEWave.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/StreamingAssetsWAVEWave.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/StreamingAssetsWAVEWave.json.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/StreamingAssetsWAVEWave.json.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/CraftSpaceShip.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CraftSpaceShip.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/StartScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/StartScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/BulletPattern/PlayerTurret.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/BulletPattern/PlayerTurret.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/Enemy/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Enemy/Enemy.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/GameOver/GameOverPannelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/GameOver/GameOverPannelManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/MapTool/WaveSaveLoad.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/MapTool/WaveSaveLoad.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/MapTool/MapToolWaveManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/MapTool/MapToolWaveManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/MapTool/WaveSaveLoad.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/MapTool/WaveSaveLoad.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/ObjectPolling/ObjectPoolManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/ObjectPolling/ObjectPoolManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/PlayerHP.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/PlayerHP.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/Player/PlayerStatus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/PlayerStatus.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/Player/WaveManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/WaveManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/ReadData/XMLReader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/ReadData/XMLReader.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/StartScene/StartSceneManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/StartScene/StartSceneManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssetsENEMYWave.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssetsENEMYWave.json.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssetsPATHWave.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssetsPATHWave.json.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssetsWAVEWave.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssetsWAVEWave.json.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/meterial/StarParticle 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/meterial/StarParticle 1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/DATA.xml.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/DATA.xml.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/StreamingAssetsENEMYWave.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/StreamingAssetsENEMYWave.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/StreamingAssetsENEMYWave.json.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/StreamingAssetsENEMYWave.json.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/StreamingAssetsPATHWave.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/StreamingAssetsPATHWave.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/StreamingAssetsPATHWave.json.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/StreamingAssetsPATHWave.json.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/StreamingAssetsWAVEWave.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/StreamingAssetsWAVEWave.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/StreamingAssetsWAVEWave.json.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/StreamingAssetsWAVEWave.json.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/build_info" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/build_info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/AndroidLogcatSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/AndroidLogcatSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -222,20 +71,24 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8F9A7EA3-47A4-4FFD-AD6C-91B550598CCD/1a/cf5a9f12/List`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8F9A7EA3-47A4-4FFD-AD6C-91B550598CCD/32/370b8592/Void.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/ReadData/XMLReader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C7864A0E-AEB2-4B2A-999F-B177623D54B4/a5/fdb5a0ac/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/StreamingAssetsWave.json" />
         <option value="$PROJECT_DIR$/Assets/StreamingAssetsENEMYWave.json" />
-        <option value="$PROJECT_DIR$/Assets/Script/MapTool/MapToolWaveManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/BulletPattern/PlayerTurret.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/GameOver/GameOverPannelManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/Enemy/Enemy.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/Player/PlayerStatus.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/StartScene/StartSceneManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/MapTool/MapToolWaveManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/ReadData/XMLReader.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/MapTool/WaveSaveLoad.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Player/PlayerHP.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/StreamingAssetsENEMYWave.json" />
+        <option value="$PROJECT_DIR$/Assets/Script/ObjectPolling/ObjectPoolManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Player/PlayerStatus.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/GameOver/GameOverPannelManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Enemy/Enemy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/StartScene/StartSceneManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Player/WaveManager.cs" />
       </list>
     </option>
@@ -269,7 +122,10 @@
       <workItem from="1632759472397" duration="8349000" />
       <workItem from="1632805140769" duration="13160000" />
       <workItem from="1632842965531" duration="12604000" />
-      <workItem from="1632894960708" duration="55288000" />
+      <workItem from="1632894960708" duration="63998000" />
+      <workItem from="1633060361144" duration="114000" />
+      <workItem from="1633060497764" duration="9083000" />
+      <workItem from="1633070177485" duration="11605000" />
     </task>
     <servers />
   </component>
@@ -296,17 +152,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="541" y="165" key="#Inspection_severity/0.0.1920.1040/1920.181.1600.860@0.0.1920.1040" timestamp="1632904079591" />
-    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog" timestamp="1632842571491">
+    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog" timestamp="1633067768264">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog/0.0.1920.1040/1920.181.1600.860@0.0.1920.1040" timestamp="1632842571491" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1632933342095">
+    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog/0.0.1920.1040/1920.181.1600.860@0.0.1920.1040" timestamp="1633067768264" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1633079339974">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/1920.181.1600.860@0.0.1920.1040" timestamp="1632933342095" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1632829417572">
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/1920.181.1600.860@0.0.1920.1040" timestamp="1633079339974" />
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1632960319343" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1633079678877">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.181.1600.860@0.0.1920.1040" timestamp="1632829417572" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.181.1600.860@0.0.1920.1040" timestamp="1633079678877" />
   </component>
 </project>

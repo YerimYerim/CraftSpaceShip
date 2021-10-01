@@ -17,7 +17,7 @@ public class Serialization<T>
 
     public Serialization(List<T> target)
     {
-        this._list = target;
+        _list = target;
     }
 };
 

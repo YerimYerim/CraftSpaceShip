@@ -42,7 +42,7 @@ public class  ObjectPoolManager : MonoBehaviour
     {
         for (int i = 0; i < _objects.Count; ++i)
         {
-            if(Vector3.Distance(_objects[i].transform.position,Vector3.zero) > 10f && _objects[i].activeSelf == true)
+            if(Vector3.Distance(_objects[i].transform.position,Vector3.zero) > 6f && _objects[i].activeSelf == true)
             {
                 _objects[i].SetActive(false);
                 _objects[i].transform.position = Vector3.zero;

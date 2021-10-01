@@ -51,7 +51,6 @@
           </e>
           <e p="MapTool" t="Include">
             <e p="MapToolWaveManager.cs" t="Include" />
-            <e p="WaveSaveLoad.cs" t="Include" />
           </e>
           <e p="ObjectPolling" t="Include">
             <e p="ObjectPoolManager.cs" t="Include" />
@@ -63,6 +62,7 @@
             <e p="WaveManager.cs" t="Include" />
           </e>
           <e p="ReadData" t="Include">
+            <e p="WaveSaveLoad.cs" t="Include" />
             <e p="XMLReader.cs" t="Include" />
           </e>
           <e p="StartScene" t="Include">

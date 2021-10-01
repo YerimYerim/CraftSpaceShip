@@ -47,7 +47,6 @@ public class PlayerHP : MonoBehaviour
             if (other.gameObject.name.Equals("Enemy_Bullet(Clone)"))
             {
                 other.gameObject.SetActive(false);
-                print("sd");
             }
 
 

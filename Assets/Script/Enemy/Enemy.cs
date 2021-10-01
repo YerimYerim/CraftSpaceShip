@@ -35,7 +35,7 @@ public class Enemy : MonoBehaviour
     
     [Header("Move")]
     [SerializeField] public List<Vector3> _path;
-    [SerializeField] private int _pathNum;
+    [SerializeField] public int _pathNum;
     [SerializeField] public float _moveSpeed;
     [SerializeField] public float _rotateSpeed;
     
@@ -168,11 +168,10 @@ public class Enemy : MonoBehaviour
             {
                 DeadEffect.transform.position = transform.position;
                 DeadEffect.SetActive(true);
-                
-                gameObject.SetActive(false);
-                
+                isStart = false;
                 PlayerStatus.AddScore(_enemyType);
                 PlayerStatus.AddCombo();
+                gameObject.SetActive(false);
             }
             _animator.SetBool("isHit", true);
 

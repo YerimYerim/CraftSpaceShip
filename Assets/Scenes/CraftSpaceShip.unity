@@ -552,7 +552,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 275.668, y: 0}
+  m_SizeDelta: {x: 230, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &162072941
 MonoBehaviour:
@@ -2141,11 +2141,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d936bf857f8c264baf275806be1c869, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemysList:
+  _enemysList: []
+  _enemyPrefabs:
   - {fileID: 35351369493807169, guid: c57d968f405ba1a4a9efec5cd44eb8d1, type: 3}
   - {fileID: 2913559680152116180, guid: 2ab05c7c092154e4ea0108f95a8669c7, type: 3}
   - {fileID: 5169793820361391873, guid: b0975896c9e95394185f5663a14119c7, type: 3}
-  _waves: []
 --- !u!4 &1238389814
 Transform:
   m_ObjectHideFlags: 0
@@ -2154,7 +2154,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1238389812}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5223007, y: -1.7999992, z: -38.713226}
+  m_LocalPosition: {x: 0.5223007, y: -0.8, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2261,7 +2261,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh38842
+  m_Name: pb_Mesh16386
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -32071,6 +32071,36 @@ MonoBehaviour:
   parentTransform: {fileID: 1513121553}
   LastNum: 0
   StartPoint: {fileID: 336343252}
+--- !u!1 &1564866263
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1564866264}
+  m_Layer: 0
+  m_Name: Waves
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1564866264
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1564866263}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1583432505
 GameObject:
   m_ObjectHideFlags: 0
@@ -37419,7 +37449,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh139050
+  m_Name: pb_Mesh16428
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

@@ -14654,7 +14654,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5169793820635571832}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3, y: 0, z: 18.13}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_Children:
   - {fileID: 5169793820635203386}
@@ -14740,7 +14740,7 @@ MonoBehaviour:
   _bulletPattern: {fileID: 5169793820794344579}
   _bulletShootSpeed: 0.1
   _bulletMoveSpeed: 10
-  isStart: 1
+  isStart: 0
   DeadEffect: {fileID: 0}
   _animator: {fileID: 0}
   _material: {fileID: 0}

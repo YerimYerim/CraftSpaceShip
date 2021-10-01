@@ -152,9 +152,9 @@ public static class WaveSaveLoad
         string ToJsonDataENEMY  = ""; 
         string ToJsonDataPATH  = ""; 
         
-        string filePathWAVE = Application.streamingAssetsPath+"WAVE" + FilePath;
-        string filePathENEMY = Application.streamingAssetsPath+ "ENEMY" + FilePath;
-        string filePathPATH = Application.streamingAssetsPath + "PATH" + FilePath;
+        string filePathWAVE = Application.streamingAssetsPath + "/StreamingAssetsWAVEWave.json";
+        string filePathENEMY =  Application.streamingAssetsPath + "/StreamingAssetsENEMYWave.json";
+        string filePathPATH = Application.streamingAssetsPath + "/StreamingAssetsPATHWave.json";
         
         ToJsonDataWAVE = saveWave();
         ToJsonDataENEMY = saveEnemy();
@@ -169,53 +169,13 @@ public static class WaveSaveLoad
         File.WriteAllText(filePathPATH, ToJsonDataPATH);
 
     }
-    // public static void LoadGameData() { 
-    //     string filePath = Application.persistentDataPath + FilePath;
-    //     if (File.Exists(filePath))
-    //     {
-    //         Debug.Log("불러오기 성공"); 
-    //         string FromJsonData = File.ReadAllText(filePath); 
-    //         WaveFormat waveFormat = JsonUtility.FromJson<WaveFormat>(FromJsonData);
-    //         Debug.Log(FromJsonData);
-    //     } 
-    //     // 저장된 게임이 없다면
-    //     // else
-    //     // {
-    //     //     print("새로운 파일 생성");
-    //     //     _gameData = new GameData();
-    //     // }
-    //     //
-    //     // // 저장된 게임이 있다면
-    //     // //
-    //     // WaveFormat waveFormat = new WaveFormat();
-    //     // EnemyFormat enemyFormat = new EnemyFormat();
-    //     // PathFormat pathFormat = new PathFormat();
-    //     // for (int i = 0; i <Waves.Count; ++i)
-    //     // {
-    //     //     JsonToData += saveWave(i);
-    //     //     for (int j = 0; j <Waves[i].Enemys.Count; ++j)
-    //     //     {
-    //     //         JsonToData += saveEnemy(i, j);
-    //     //         for (int t = 0; t < Waves[i].Enemys[j]._path.Count; ++t)
-    //     //         {
-    //     //             JsonToData += saveVector(i,j , t);
-    //     //         }
-    //     //     }    
-    //     // }
-    //     
-    // }
-
     public static List<MapToolWaveManager.Wave> Load()
     {
-        string ToJsonDataWAVE  = ""; 
-        string ToJsonDataENEMY  = ""; 
-        string ToJsonDataPATH  = ""; 
-        
-        string filePathENEMY = Application.streamingAssetsPath + "/StreamingAssetsENEMYWave.json";
+        string filePathENEMY =  "/StreamingAssetsENEMYWave.json";
         TextAsset textDataEnemy = Resources.Load ("StreamingAssetsENEMYWave") as TextAsset;
-        string filePathPATH = Application.streamingAssetsPath + "/StreamingAssetsPATHWave.json";
+        string filePathPATH = "/StreamingAssetsPATHWave.json";
         TextAsset textDatapath = Resources.Load ("StreamingAssetsPATHWave") as TextAsset;
-        string filePathWAVE = Application.streamingAssetsPath + "/StreamingAssetsWAVEWave.json";
+        string filePathWAVE = "/StreamingAssetsWAVEWave.json";
         TextAsset textDatawave = Resources.Load ("StreamingAssetsWAVEWave") as TextAsset;
 
         string EnemyText = textDataEnemy.ToString();// = File.ReadAllText(filePathENEMY);

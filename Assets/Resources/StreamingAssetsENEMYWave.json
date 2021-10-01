@@ -2,39 +2,6 @@
     "_list": [
         {
             "_parentWaveNum": 0,
-            "_HP": 20,
-            "_enemyType": 0,
-            "_attackPattern": 1,
-            "_moveSpeed": 10.0,
-            "_rotateSpeed": 10.0,
-            "_bulletShootSpeed": 0.0,
-            "_bulletMoveSpeed": 0.0,
-            "_pathCount": 3
-        },
-        {
-            "_parentWaveNum": 0,
-            "_HP": 10,
-            "_enemyType": 0,
-            "_attackPattern": 1,
-            "_moveSpeed": 20.0,
-            "_rotateSpeed": 10.0,
-            "_bulletShootSpeed": 0.0,
-            "_bulletMoveSpeed": 0.0,
-            "_pathCount": 3
-        },
-        {
-            "_parentWaveNum": 1,
-            "_HP": 20,
-            "_enemyType": 1,
-            "_attackPattern": 2,
-            "_moveSpeed": 10.0,
-            "_rotateSpeed": 5.0,
-            "_bulletShootSpeed": 0.0,
-            "_bulletMoveSpeed": 0.0,
-            "_pathCount": 7
-        },
-        {
-            "_parentWaveNum": 1,
             "_HP": 0,
             "_enemyType": 0,
             "_attackPattern": 0,
@@ -42,62 +9,29 @@
             "_rotateSpeed": 0.0,
             "_bulletShootSpeed": 0.0,
             "_bulletMoveSpeed": 0.0,
-            "_pathCount": 2
+            "_pathCount": 0
         },
         {
-            "_parentWaveNum": 1,
-            "_HP": 20,
+            "_parentWaveNum": 0,
+            "_HP": 0,
             "_enemyType": 0,
             "_attackPattern": 0,
-            "_moveSpeed": 50.0,
+            "_moveSpeed": 0.0,
             "_rotateSpeed": 0.0,
             "_bulletShootSpeed": 0.0,
             "_bulletMoveSpeed": 0.0,
-            "_pathCount": 2
+            "_pathCount": 3
         },
         {
-            "_parentWaveNum": 2,
-            "_HP": 100,
-            "_enemyType": 2,
+            "_parentWaveNum": 0,
+            "_HP": 0,
+            "_enemyType": 0,
             "_attackPattern": 0,
-            "_moveSpeed": 20.0,
+            "_moveSpeed": 0.0,
             "_rotateSpeed": 0.0,
             "_bulletShootSpeed": 0.0,
             "_bulletMoveSpeed": 0.0,
-            "_pathCount": 4
-        },
-        {
-            "_parentWaveNum": 3,
-            "_HP": 30,
-            "_enemyType": 0,
-            "_attackPattern": 0,
-            "_moveSpeed": 30.0,
-            "_rotateSpeed": 0.0,
-            "_bulletShootSpeed": 0.0,
-            "_bulletMoveSpeed": 0.0,
-            "_pathCount": 9
-        },
-        {
-            "_parentWaveNum": 3,
-            "_HP": 5,
-            "_enemyType": 0,
-            "_attackPattern": 0,
-            "_moveSpeed": 50.0,
-            "_rotateSpeed": 30.0,
-            "_bulletShootSpeed": 0.0,
-            "_bulletMoveSpeed": 0.0,
-            "_pathCount": 1
-        },
-        {
-            "_parentWaveNum": 4,
-            "_HP": 50,
-            "_enemyType": 1,
-            "_attackPattern": 2,
-            "_moveSpeed": 100.0,
-            "_rotateSpeed": 60.0,
-            "_bulletShootSpeed": 0.0,
-            "_bulletMoveSpeed": 0.0,
-            "_pathCount": 1
+            "_pathCount": 5
         }
     ]
 }

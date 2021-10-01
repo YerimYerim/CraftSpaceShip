@@ -77,6 +77,7 @@ public class StartSceneManager : MonoBehaviour
         StartButton = GameObject.Find("StartButton").GetComponent<Button>();
 
         ExitButton = GameObject.Find("ExitButton").GetComponent<Button>();
+        ExitButton.onClick.AddListener(delegate { ExitButtonOnClick(); });
         StoreButton = GameObject.Find("StoreButton").GetComponent<Button>();
         SettingButton = GameObject.Find("Settingbutton").GetComponent<Button>();
         OpenInfoButton = GameObject.Find("InfoButton").GetComponent<Button>();
@@ -96,7 +97,6 @@ public class StartSceneManager : MonoBehaviour
         for (int i = 0; i < PlayerStatus._turretinfos.Count; ++i)
         {
             var turretinfo = PlayerStatus._turretinfos[i];
-            print(turretinfo._sprite == null);
             turretinfo._sprite = TurretSpriteImage[i];
 
             if (PlayerPrefs.HasKey(i + "TurretLevel") == false)
@@ -373,5 +373,10 @@ public class StartSceneManager : MonoBehaviour
         HaveToPayGoldText.text = GetLevelPerNeedGold(SelectedTurretType).ToString();
         
         
+    }
+
+    void ExitButtonOnClick()
+    {
+        Application.Quit();
     }
 }
